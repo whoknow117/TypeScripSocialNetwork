@@ -1,0 +1,72 @@
+$bgColor: #e7e7e7;
+$borderRadiusLink: 2px;
+$activeColor: #000;
+$noneACtiveColor: #4f4f4f;
+
+
+.item {
+  width: 100%;
+  display: block;
+  position: relative;
+  height: 44px;
+  align-items: center;
+  border-radius: $borderRadiusLink;
+  overflow: hidden;
+  transition: background .1s ease-in-out;
+
+  &:hover {
+
+    .itemLink {
+      background: $bgColor;
+    }
+    svg {
+      fill: $activeColor;
+    }
+  }
+
+  &Link {
+    color: $noneACtiveColor;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    font-weight: 400;
+    padding:  0 10px;
+    font-size: 0.95rem;
+    width: 100%;
+    svg {
+      margin: 0;
+      padding: 0;
+
+      height: 28px;
+    }
+    .icon {
+
+    }
+    .title {
+      margin-left: 15px;
+    }
+  }
+  &:last-child {
+    position: absolute;
+    bottom: 20px;
+    width: 150px;
+    left: 20px;
+    right: 20px;
+    svg {
+      width: 28px;
+      height: 28px;
+
+      transition: all .3s ease-in-out;
+    }
+
+
+
+  }
+}
+.active {
+  background: $bgColor;
+  svg {
+    fill: $activeColor;
+  }
+}

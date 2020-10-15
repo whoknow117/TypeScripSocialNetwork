@@ -1,0 +1,54 @@
+$searchIconColor: rgb(65, 65, 65);
+
+
+.form {
+  position: relative;
+
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  margin-left: 200px;
+  flex-basis: 20%;
+}
+.search {
+  border-radius: 2px;
+  border: none;
+  overflow: hidden;
+  height: 30px;
+  input {
+    outline: none;
+    height: 30px;
+    line-height: 30px;
+    width: 540px;
+    border: none;
+    background: rgba(0,0,0,.1);
+    padding-left: 10px;
+    color: #fff;
+
+  }
+
+}
+.btn {
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  border: none;
+
+  outline: none;
+  border-left: none;
+  border-radius: 1px;
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: 0;
+  top: 0;
+  justify-content: center;
+  svg {
+    fill: $searchIconColor;
+    font-size: 24px;
+
+  }
+}
