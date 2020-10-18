@@ -1,0 +1,14 @@
+
+.wrapper {
+  position: relative;
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 200px 10fr;
+
+  grid-template-areas:
+    "h h "
+    "n c "
+    "n f ";
+
+
+}

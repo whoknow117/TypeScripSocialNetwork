@@ -3,31 +3,24 @@ import classes from './Dialogs.module.scss';
 import {BrowserRouter, Route} from "react-router-dom";
 import DialogList from "./DialogList/DialogList";
 import Dialog from "./Dialog/Dialog";
+import {DialogPageType} from '../../redux/store';
+
 
 type PropsType = {
-
-    state: any
+    dialogsPage: DialogPageType
 }
 
-const Dialogs = (props: any) => {
+function Dialogs(props: PropsType) {
 
+    let dialogs = props.dialogsPage.dialogs;
+    let messages = props.dialogsPage.messages;
 
     return (
 
-        <div className={classes.wrapper}>
+        <div className={classes.dialogs}>
+            <DialogList dialogs={dialogs}/>
 
-            {/*{props.state.users.map( (el) => {*/}
-            {/*    let path = '/dialog/' + el.id;*/}
-            {/*    return (*/}
-            {/*        <Route path={path} render={() => <Dialog*/}
-
-
-            {/*            state={props.state}*/}
-
-
-            {/*        />}/>*/}
-            {/*    )*/}
-            {/*})}*/}
+            <Dialog dialogs={dialogs} messages={messages}/>
 
 
         </div>

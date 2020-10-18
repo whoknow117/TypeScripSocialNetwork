@@ -1,24 +1,31 @@
 import React from 'react';
-import './App.scss';
-import Header from './components/Header/Header';
-
+import classes from './App.module.scss';
 import Sidebar from "./components/Sidebar/Sidebar";
-import { BrowserRouter, Route } from "react-router-dom";
+import {BrowserRouter, Route} from "react-router-dom";
 import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
+import Header from "./components/Header/Header";
+import store from "./redux/store";
+ 
 
+  
+ 
 
+const App = () => {
+    debugger
 
-function App() {
+    let dialogsPage = store._state.dialogsPage;
+
     return (
-        <div className="App">
-            <div className='wrapper'>
+        <div className={classes.wrapper}>
+
                 <Header />
                 <Sidebar/>
-                <Route exact path='/' render={ () => <Profile/> } />
-                <Route path="/dialogs" render={ () => <Dialogs/> } />
+                <Route exact path='/profile' render={() => <Profile />}/>
+                <Route path="/dialogs" render={() => <Dialogs dialogsPage={dialogsPage}/>}/>
 
-            </div>
+
+
         </div>
     );
 }

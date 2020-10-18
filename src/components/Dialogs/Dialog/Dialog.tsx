@@ -1,20 +1,28 @@
 import React from 'react';
 import classes from './Dialog.module.scss';
-
+import {MessagesType} from "../../../redux/store";
+import {DialogsType} from "../../../redux/store";
+import Input from "./Input/Input";
+import UserNav from "./UserNav/UserNav";
 
 type PropsType = {
-     state: any
+    dialogs: Array<DialogsType>
+    messages: Array<MessagesType>
+
 
 }
 
 
-const Dialog = (props: PropsType) => {
+function Dialog (props: PropsType) {
 
     debugger
     return (
 
         <div className={classes.dialog}>
-
+            <UserNav/>
+            <div className={classes.messages}>
+            </div>
+            <Input/>
         </div>
 
     )
