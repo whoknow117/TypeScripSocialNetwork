@@ -3,7 +3,7 @@ import classes from './SingleUserDialogLink.module.scss';
 import { NavLink } from "react-router-dom";
 
 type PropsType = {
-    id: number
+    id: string
     name: string
     message: string
     img: string

@@ -1,3 +1,5 @@
+import React, { useState} from 'react';
+import {v1} from "uuid";
 const ADD_POST = 'ADD-POST';
 const ADD_NEW_TEXT = 'ADD-NEW-TEXT';
 const ADD_NEW_MESSAGE_TEXT = 'ADD-NEW-MESSAGE-TEXT';
@@ -6,20 +8,20 @@ const SEND_MESSAGE = 'SEND-MESSAGE';
 
 export type DialogsType = {
     img: string
-    id: number
+    id: string
     name: string
     message: string
 }
 
 export type MessagesType = {
 
-    id: number
+    id: string
     message: string
 }
 
 export type PostsType = {
 
-    id: number
+    id: string
     message: string
     likesCount: number
 
@@ -54,51 +56,51 @@ let store: RootStateType = {
     _state: {
         profilePage: {
             posts: [
-                {id: 1, message: 'hi', likesCount: 12},
-                {id: 2, message: 'asdasd', likesCount: 12},
-                {id: 3, message: 'hiadac', likesCount: 12},
-                {id: 4, message: 'acsdci', likesCount: 12},]
+                {id: v1(), message: 'hi', likesCount: 12},
+                {id: v1(), message: 'asdasd', likesCount: 12},
+                {id: v1(), message: 'hiadac', likesCount: 12},
+                {id: v1(), message: 'acsdci', likesCount: 12},]
 
         },
         dialogsPage: {
             dialogs: [
                 {
-                    id: 1,
+                    id: v1(),
                     name: 'Dimas',
-                    message: 'asdasd',
+                    message: 'Lorem Ipsum является текст-заполнитель обычно используется в графических, печать и издательской индустрии для предварительного просмотра макета и визуальных макетах.',
                     img: 'https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80'
                 },
                 {
-                    id: 2,
+                    id: v1(),
                     name: 'Andre',
-                    message: 'asdasd',
+                    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
                     img: 'https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'
                 },
                 {
-                    id: 3,
+                    id: v1(),
                     name: 'Jana',
-                    message: 'asdasd',
+                    message: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
                     img: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
                 },
                 {
-                    id: 4,
+                    id: v1(),
                     name: 'Ludovic',
-                    message: 'asdasd',
+                    message: 'Lorem Ipsum начал как омлет, бессмысленные Латинской происходит от 1-го века до н.э. текст Цицерона De Finibus Bonorum et Malorum.',
                     img: 'https://i1.wp.com/www.alphr.com/wp-content/uploads/2020/05/Zoom-How-to-Set-Profile-Picture.jpg?resize=1200%2C666&ssl=1'
                 },
                 {
-                    id: 5,
+                    id: v1(),
                     name: 'Sirena',
-                    message: 'asdasd ',
+                    message: 'Классический «Lorem ipsum dolor sit amet…» проход отнести к ремиксов римского философа Цицерона 45 г. до н.э. текст De Finibus Bonorum et Malorum («О крайностями добра и зла») ',
                     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTgXGSWzxNteVrILpdCKpmTz_39LItE3ZFDHA&usqp=CAU'
                 },
             ],
             messages: [
-                {id: 1, message: 'hello den how are you?'},
-                {id: 2, message: 'asdasd'},
-                {id: 3, message: 'hiadac'},
-                {id: 4, message: 'acsdci'},
-                {id: 5, message: 'asdc'},
+                {id: v1(), message: 'hello den how are you?'},
+                {id: v1(), message: 'asdasd'},
+                {id: v1(), message: 'hiadac'},
+                {id: v1(), message: 'acsdci'},
+                {id: v1(), message: 'asdc'},
             ],
 
         },
@@ -108,6 +110,7 @@ let store: RootStateType = {
     }
 
 }
+
 
 
 export default store;

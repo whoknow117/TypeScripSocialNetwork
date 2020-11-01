@@ -10,8 +10,6 @@ import HeaderLogo from "./HeaderLogo/HeaderLogo";
 
 
 
-
-
 const Header = () => {
     let arrIcons = [
         {icon: <AttachFileSharpIcon/>},
@@ -27,7 +25,7 @@ const Header = () => {
                 <HeaderLogo/>
                 <Search/>
                 <div className={classes.icons}>
-                    {arrIcons.map((el:any) => {
+                    {arrIcons.map((el) => {
                         return (
                             <NavIcons icon={el.icon}/>
                         )
