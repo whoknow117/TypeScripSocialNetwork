@@ -6,16 +6,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ba8a1a0-a1a5-41a9-bee2-c8fc81e359f6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/AdditionalList/AdditionalList.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/AdditionalList/AdditionalList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/Content/Content.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/Content/Content.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/Avatar/Avatar.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/Avatar/Avatar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/FriendsList/FriendsList.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/FriendsList/FriendsList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogList/SingleUserDialogLink/SingleUserDialogLink.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogList/SingleUserDialogLink/SingleUserDialogLink.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogList/SingleUserDialogLink/SingleUserDialogLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogList/SingleUserDialogLink/SingleUserDialogLink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderLogo/HeaderLogo.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderLogo/HeaderLogo.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/NavItem/NavItem.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/NavItem/NavItem.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/variables/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/variables/variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +52,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projects\student\SocialMedia\my-app\src\components\Profile\ProfileInfo" />
       <recent name="C:\projects\student\SocialMedia\my-app\src\components\Header" />
     </key>
   </component>
@@ -66,7 +76,10 @@
       <workItem from="1603035063445" duration="593000" />
       <workItem from="1603890536250" duration="6233000" />
       <workItem from="1603979688740" duration="1165000" />
-      <workItem from="1604207987919" duration="1091000" />
+      <workItem from="1604207987919" duration="4477000" />
+      <workItem from="1604230218040" duration="2524000" />
+      <workItem from="1604906535642" duration="2668000" />
+      <workItem from="1605381825546" duration="627000" />
     </task>
     <servers />
   </component>
@@ -86,22 +99,22 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="518" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602587821231">
+    <state x="518" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604231700874">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="518" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1602587821231" />
+    <state x="518" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1604231700874" />
     <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602861438168">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1602861438168" />
-    <state x="277" y="77" key="SettingsEditor" timestamp="1604209457297">
+    <state x="277" y="77" key="SettingsEditor" timestamp="1604209479461">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1604209457297" />
-    <state x="0" y="0" width="1204" height="598" key="dock-window-1" timestamp="1602568655989">
+    <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1604209479461" />
+    <state x="0" y="0" width="1204" height="598" key="dock-window-1" timestamp="1604230747329">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="0" y="0" width="1204" height="598" key="dock-window-1/0.0.1536.864@0.0.1536.864" timestamp="1602568655989" />
+    <state x="0" y="0" width="1204" height="598" key="dock-window-1/0.0.1536.864@0.0.1536.864" timestamp="1604230747329" />
     <state x="425" y="197" key="run.anything.popup" timestamp="1602587240210">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

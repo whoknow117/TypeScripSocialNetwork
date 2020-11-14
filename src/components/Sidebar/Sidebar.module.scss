@@ -1,15 +1,8 @@
-$bgColor: #f5f5f5;
-$border: rgba(0,0,0,.1);
-$bgActive: rgba(0,0,0,.1);
-$txtColor: rgb(77, 77, 77);
-$iconSize: 24px;
-$boxShadowNeuroUp: -2px -2px 8px rgba(255,255,255,1),
--2px -2px 12px rgba(255,255,255,0.5),
-inset 2px 2px 4px rgba(255,255,255,0.1),
-2px 2px 8px rgba(0,0,0,.15);
-$boxShadowNeuroDown: inset 2px 2px 4px rgba(255,255,255,0.1),
-inset 3px 3px 5px rgba(0,0,0,.15);
-$iconColor: #6254ff;
+@import "src/variables/variables";
+
+
+
+
 
 
 
@@ -31,6 +24,9 @@ $iconColor: #6254ff;
   position: fixed;
   z-index: 101;
   padding: 20px 20px;
+  svg {
+    fill: $mainAlternativeColor;
+  }
 
 }
 

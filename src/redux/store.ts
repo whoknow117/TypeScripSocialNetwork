@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+
 import {v1} from "uuid";
 const ADD_POST = 'ADD-POST';
 const ADD_NEW_TEXT = 'ADD-NEW-TEXT';
@@ -36,6 +36,7 @@ export type DialogPageType = {
 
     dialogs: Array<DialogsType>
     messages: Array<MessagesType>
+    newMessage: string
 
 }
 
@@ -102,12 +103,14 @@ let store: RootStateType = {
                 {id: v1(), message: 'acsdci'},
                 {id: v1(), message: 'asdc'},
             ],
+            newMessage: '',
 
         },
         sidebar: {},
 
 
     }
+
 
 }
 

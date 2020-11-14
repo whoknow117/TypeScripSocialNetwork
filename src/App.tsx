@@ -8,20 +8,23 @@ import Header from "./components/Header/Header";
 import store from "./redux/store";
  
 
-  
+
+
+
  
 
 const App = () => {
     debugger
 
     let dialogsPage = store._state.dialogsPage;
+    let profilePage = store._state.profilePage;
 
     return (
         <div className={classes.wrapper}>
 
                 <Header />
                 <Sidebar/>
-                <Route exact path='/profile' render={() => <Profile />}/>
+                <Route exact path='/profile' render={() => <Profile profilePage={profilePage}/>}/>
                 <Route path="/dialogs" render={() => <Dialogs dialogsPage={dialogsPage}/>}/>
 
 
