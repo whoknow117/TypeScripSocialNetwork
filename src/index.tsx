@@ -4,16 +4,25 @@ import './index.css';
 import App from './App';
 import './App.scss';
 import { BrowserRouter} from 'react-router-dom';
+import store, {RootStateType, StateType} from "./redux/store";
 
 
-ReactDOM.render(
+
+let rerenderEntireTree = (store:RootStateType) => {
+    ReactDOM.render(
         <BrowserRouter>
             <React.StrictMode>
-                <App  />
+                <App store={store}/>
             </React.StrictMode>
         </BrowserRouter>,
         document.getElementById('root')
     );
+}
+rerenderEntireTree(store)
+
+
+
+
 
 
 

@@ -50,10 +50,24 @@ export type StateType = {
 
 }
 export type RootStateType = {
+    getState: () => StateType
     _state: StateType
+    subscriber: (observer: () => void) => void
+    _rerender:() => void
 }
 
 let store: RootStateType = {
+
+    getState(){
+        return this._state
+    },
+    subscriber(observer) {
+      this._rerender = observer
+    },
+    _rerender() {
+        console.log('asd')
+    },
+
     _state: {
         profilePage: {
             posts: [
@@ -112,8 +126,19 @@ let store: RootStateType = {
     }
 
 
+
 }
 
+export const addPost = (postText: string) => {
 
+    const newPost: PostsType = {
+        id: v1(),
+        message: postText,
+        likesCount: 0,
+
+    }
+
+    store._state.profilePage.posts.push(newPost)
+}
 
 export default store;

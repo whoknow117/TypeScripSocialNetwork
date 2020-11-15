@@ -6,25 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ba8a1a0-a1a5-41a9-bee2-c8fc81e359f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/AdditionalList/AdditionalList.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/AdditionalList/AdditionalList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/Content/Content.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/Content/Content.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/Avatar/Avatar.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/Avatar/Avatar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/FriendsList/FriendsList.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/FriendsList/FriendsList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderLogo/HeaderLogo.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderLogo/HeaderLogo.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Content/Content.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Content/Content.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/NavItem/NavItem.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/NavItem/NavItem.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/variables/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/variables/variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +66,8 @@
       <workItem from="1604207987919" duration="4477000" />
       <workItem from="1604230218040" duration="2524000" />
       <workItem from="1604906535642" duration="2668000" />
-      <workItem from="1605381825546" duration="627000" />
+      <workItem from="1605381825546" duration="657000" />
+      <workItem from="1605442062530" duration="6442000" />
     </task>
     <servers />
   </component>
