@@ -1,5 +1,6 @@
-
 import {v1} from "uuid";
+import {act} from "react-dom/test-utils";
+
 const ADD_POST = 'ADD-POST';
 const ADD_NEW_TEXT = 'ADD-NEW-TEXT';
 const ADD_NEW_MESSAGE_TEXT = 'ADD-NEW-MESSAGE-TEXT';
@@ -53,23 +54,22 @@ export type StateType = {
 export type RootStateType = {
     getState: () => StateType
     _state: StateType
-    subscriber: (observer:() => void) => void
-    _rerender:() => void
-    dispatch: (action: ActionTypes) => void
-    changeNewText:(newText: string) => void
+    subscriber: (observer: () => void) => void
+    _rerender: () => void
+    dispatch: (action: any) => void
+
 }
 export type AddPostActionType = {
-    type:string
+    type: string
     postText: string
 
 }
 export type ChangeNewTextActionType = {
-    type:string
+    type: string
     newText: string
 
 }
-export type ActionTypes = ChangeNewTextActionType | AddPostActionType
-
+export type ActionTypes = AddPostActionType | ChangeNewTextActionType
 
 
 export const addPostAC = (postText: string) => {
@@ -81,23 +81,45 @@ export const addPostAC = (postText: string) => {
     }
 }
 
+export const changeNewTextAC = (newText: string) => {
+
+    return {
+        type: 'CHANGE-NEW-TEXT',
+        newText: newText
+
+    }
+}
 let store: RootStateType = {
 
-   changeNewText(newText:string) {
-        this._state.profilePage.newPostText = newText
-        this._rerender()
-    },
 
-    getState(){
+    getState() {
         return this._state
     },
-    _rerender(){
-       console.log('start')
+    _rerender() {
+        console.log('start')
     },
-    subscriber(observer: () => void)  {
-      this._rerender = observer
+    subscriber(observer: () => void) {
+        this._rerender = observer
     },
+    dispatch(action) {
+        if (action.type === 'ADD-POST') {
 
+            const newPost: PostsType = {
+                id: v1(),
+                message: action.postText,
+                likesCount: 0,
+
+            }
+            this._state.profilePage.posts.push(newPost)
+            this._rerender()
+        } else if (action.type === 'CHANGE-NEW-TEXT') {
+
+            this._state.profilePage.newPostText = action.newText
+            this._rerender()
+
+
+        }
+    },
 
     _state: {
         profilePage: {
@@ -158,24 +180,8 @@ let store: RootStateType = {
 
     },
 
-    dispatch(action: ActionTypes) {
-        if (action.type === 'ADD-POST') {
-
-            const newPost: PostsType = {
-                id: v1(),
-                message: this._state.profilePage.newPostText,
-                likesCount: 0,
-
-            }
-           this._state.profilePage.posts.push(newPost)
-            this._rerender()
-        }
-    }
-
-
 
 }
-
 
 
 export default store;

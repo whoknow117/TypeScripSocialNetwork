@@ -2,7 +2,7 @@ import React, {ChangeEvent, useState} from 'react';
 import classes from './Content.module.scss';
 import {ActionTypes, PostsType, ProfilePageType} from "../../../redux/store";
 import {v1} from "uuid";
-import {addPostAC} from "../../../redux/store";
+import {addPostAC, changeNewTextAC} from "../../../redux/store";
 
 
 type ContentType = {
@@ -19,13 +19,15 @@ const Content: React.FC<ContentType> = ({dispatch, posts,   profilePage}) => {
 
     let postMessageRef  = React.createRef<HTMLTextAreaElement>();
 
-    const addPost = () => {dispatch(addPostAC('hello'))}
+    const changeNewText = () => {dispatch(changeNewTextAC(postMessageRef.current ? postMessageRef.current.value : ""))}
+
+    const addPost = () => {dispatch(addPostAC(profilePage.newPostText))}
 
 
 
     return <div className={classes.content}>
         <div className={classes.inputWrapper}>
-            <textarea ref={postMessageRef}></textarea>
+            <textarea onChange={changeNewText} ref={postMessageRef}></textarea>
 
 
             <button onClick={addPost}  >Add</button>

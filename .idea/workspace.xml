@@ -7,12 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4ba8a1a0-a1a5-41a9-bee2-c8fc81e359f6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderLogo/HeaderLogo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderLogo/HeaderLogo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/NavIcons/NavIcons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/NavIcons/NavIcons.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/Content/Content.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Content/Content.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +69,8 @@
       <workItem from="1605724736529" duration="3295000" />
       <workItem from="1605895658344" duration="421000" />
       <workItem from="1605967592552" duration="5767000" />
-      <workItem from="1605975994285" duration="633000" />
+      <workItem from="1605975994285" duration="693000" />
+      <workItem from="1605979805426" duration="2887000" />
     </task>
     <servers />
   </component>
