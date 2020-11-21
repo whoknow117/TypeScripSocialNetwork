@@ -8,7 +8,7 @@ import store, {RootStateType, StateType} from "./redux/store";
 
 
 
-let rerenderEntireTree = (store:RootStateType) => {
+let rerenderEntireTree = ( ) => {
     ReactDOM.render(
         <BrowserRouter>
             <React.StrictMode>
@@ -18,7 +18,10 @@ let rerenderEntireTree = (store:RootStateType) => {
         document.getElementById('root')
     );
 }
-rerenderEntireTree(store)
+rerenderEntireTree()
+store.subscriber(rerenderEntireTree)
+
+
 
 
 

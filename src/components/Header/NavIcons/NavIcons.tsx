@@ -10,7 +10,7 @@ type PropsType = {
 
 
 const NavIcons = (props: PropsType) => {
-    debugger
+
 
     return (
         <div className={classes.icon}>

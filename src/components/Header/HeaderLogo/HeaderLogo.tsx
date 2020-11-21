@@ -6,7 +6,7 @@ import classes from './HeaderLogo.module.scss';
 
 
 const HeaderLogo = ( ) => {
-    debugger
+
 
     return (
         <div className={classes.headerLogo}>

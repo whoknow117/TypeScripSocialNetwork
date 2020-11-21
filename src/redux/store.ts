@@ -30,13 +30,14 @@ export type PostsType = {
 export type ProfilePageType = {
 
     posts: Array<PostsType>
+    newPostText: string
 
 }
 export type DialogPageType = {
 
     dialogs: Array<DialogsType>
     messages: Array<MessagesType>
-    newMessage: string
+    newMessage: string | undefined
 
 }
 
@@ -52,21 +53,51 @@ export type StateType = {
 export type RootStateType = {
     getState: () => StateType
     _state: StateType
-    subscriber: (observer: () => void) => void
+    subscriber: (observer:() => void) => void
     _rerender:() => void
+    dispatch: (action: ActionTypes) => void
+    changeNewText:(newText: string) => void
+}
+export type AddPostActionType = {
+    type:string
+    postText: string
+
+}
+export type ChangeNewTextActionType = {
+    type:string
+    newText: string
+
+}
+export type ActionTypes = ChangeNewTextActionType | AddPostActionType
+
+
+
+export const addPostAC = (postText: string) => {
+
+    return {
+        type: 'ADD-POST',
+        postText: postText
+
+    }
 }
 
 let store: RootStateType = {
 
+   changeNewText(newText:string) {
+        this._state.profilePage.newPostText = newText
+        this._rerender()
+    },
+
     getState(){
         return this._state
     },
-    subscriber(observer) {
+    _rerender(){
+       console.log('start')
+    },
+    subscriber(observer: () => void)  {
       this._rerender = observer
     },
-    _rerender() {
-        console.log('asd')
-    },
+
 
     _state: {
         profilePage: {
@@ -74,7 +105,9 @@ let store: RootStateType = {
                 {id: v1(), message: 'hi', likesCount: 12},
                 {id: v1(), message: 'asdasd', likesCount: 12},
                 {id: v1(), message: 'hiadac', likesCount: 12},
-                {id: v1(), message: 'acsdci', likesCount: 12},]
+                {id: v1(), message: 'acsdci', likesCount: 12},
+            ],
+            newPostText: 'asdasd'
 
         },
         dialogsPage: {
@@ -123,22 +156,26 @@ let store: RootStateType = {
         sidebar: {},
 
 
+    },
+
+    dispatch(action: ActionTypes) {
+        if (action.type === 'ADD-POST') {
+
+            const newPost: PostsType = {
+                id: v1(),
+                message: this._state.profilePage.newPostText,
+                likesCount: 0,
+
+            }
+           this._state.profilePage.posts.push(newPost)
+            this._rerender()
+        }
     }
 
 
 
 }
 
-export const addPost = (postText: string) => {
 
-    const newPost: PostsType = {
-        id: v1(),
-        message: postText,
-        likesCount: 0,
-
-    }
-
-    store._state.profilePage.posts.push(newPost)
-}
 
 export default store;
