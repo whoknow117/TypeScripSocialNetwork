@@ -1,16 +1,22 @@
 import React from 'react';
 import classes from './UserNav.module.scss';
+import {DialogsType} from "../../../../redux/store";
 
 
-function UserNav() {
+type UserNavPropsType ={
+    user: DialogsType
+}
+
+
+function UserNav(props: UserNavPropsType) {
     return (
         <div className={classes.userNav}>
             <div className={classes.userInfo}>
                 <div className={classes.image}>
-                    <img src="https://i.insider.com/589dbb873149a101788b4c85?width=1100&format=jpeg&auto=webp" alt="#"/>
+                    <img src={props.user.img} alt="#"/>
                 </div>
                 <div className={classes.content}>
-                    <h4 className={classes.title}>Alex</h4>
+                    <h4 className={classes.title}>{props.user.name}</h4>
                     <span className={classes.time}>В сети: сегодня в 12:30</span>
                 </div>
             </div>

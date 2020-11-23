@@ -2,8 +2,36 @@
 
   display: block;
   min-width: 400px;
+
+ 
   background: #fff;
   flex-basis: 60%;
-  border-left: 1px solid silver;
+
+  
+  .messages {
+    .message {
+      .image {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .content {
+        .name {
+          .title {
+
+          }
+          .time {}
+        }
+      }
+    }
+  }
 }
 

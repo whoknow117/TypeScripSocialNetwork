@@ -6,21 +6,38 @@ import Input from "./Input/Input";
 import UserNav from "./UserNav/UserNav";
 
 type PropsType = {
-    dialogs: Array<DialogsType>
-    messages: Array<MessagesType>
 
+    dialogID: string
+    user: DialogsType
+    messages: Array<MessagesType>
 
 }
 
 
-function Dialog (props: PropsType) {
+function Dialog(props: PropsType) {
 
     debugger
     return (
 
         <div className={classes.dialog}>
-            <UserNav/>
+
+            <UserNav user={props.user}/>
             <div className={classes.messages}>
+                {props.messages.map(m => m.id === props.user.id ?
+                    <div className={classes.message}>
+                        <div className={classes.image}>
+                            <img src={props.user.img} alt="#"/>
+                        </div>
+                        <div className={classes.content}>
+                            <div className={classes.name}>
+                                <h4 className={classes.title}>{props.user.name}</h4>
+                                <span className={classes.time}>21:30</span>
+                            </div>
+                            <div></div>
+                        </div>
+
+
+                         </div> : "")}
             </div>
             <Input/>
         </div>

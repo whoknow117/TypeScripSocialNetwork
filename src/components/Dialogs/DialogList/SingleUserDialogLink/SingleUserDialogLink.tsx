@@ -19,7 +19,7 @@ const SingleUserDialogLink = (props:PropsType ) => {
     return (
 
         <div className={classes.singleUser}>
-            <NavLink className={classes.link} to={path}>
+            <NavLink className={classes.link} activeClassName={classes.active} to={path}>
             <div className={classes.img}>
                 <img src={props.img} alt="#"/>
             </div>

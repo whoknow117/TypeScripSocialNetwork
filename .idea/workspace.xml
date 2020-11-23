@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand />
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ba8a1a0-a1a5-41a9-bee2-c8fc81e359f6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/common/SupperInput/SupperInput.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialog/UserNav/UserNav.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialog/UserNav/UserNav.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialog/UserNav/UserNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialog/UserNav/UserNav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogList/DialogList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogList/DialogList.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogList/SingleUserDialogLink/SingleUserDialogLink.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogList/SingleUserDialogLink/SingleUserDialogLink.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogList/SingleUserDialogLink/SingleUserDialogLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogList/SingleUserDialogLink/SingleUserDialogLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/Content/Content.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Content/Content.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/variables/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/variables/variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +83,12 @@
       <workItem from="1605895658344" duration="421000" />
       <workItem from="1605967592552" duration="5767000" />
       <workItem from="1605975994285" duration="693000" />
-      <workItem from="1605979805426" duration="2887000" />
+      <workItem from="1605979805426" duration="3394000" />
+      <workItem from="1606025630720" duration="3481000" />
+      <workItem from="1606053224431" duration="2735000" />
+      <workItem from="1606143748077" duration="3900000" />
+      <workItem from="1606150783346" duration="211000" />
+      <workItem from="1606155977669" duration="4665000" />
     </task>
     <servers />
   </component>
@@ -110,16 +128,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1602587240210" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/Dialogs/Dialog/UserNav/UserNav.tsx</url>
-          <line>7</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1606057401274">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1606057401274" />
   </component>
 </project>
