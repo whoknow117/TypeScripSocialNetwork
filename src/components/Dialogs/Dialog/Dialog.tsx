@@ -22,7 +22,7 @@ function Dialog(props: PropsType) {
         <div className={classes.dialog}>
 
             <UserNav user={props.user}/>
-            <div className={classes.messages}>
+
                 {props.messages.map(m => m.id === props.user.id ?
                     <div className={classes.message}>
                         <div className={classes.image}>
@@ -33,12 +33,14 @@ function Dialog(props: PropsType) {
                                 <h4 className={classes.title}>{props.user.name}</h4>
                                 <span className={classes.time}>21:30</span>
                             </div>
-                            <div></div>
+                            <div>
+                                {props.user.message}
+                            </div>
                         </div>
 
 
                          </div> : "")}
-            </div>
+
             <Input/>
         </div>
 
