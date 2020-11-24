@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './Dialog.module.scss';
-import {MessagesType} from "../../../redux/store";
+import {ActionTypes, DialogPageType, MessagesType} from "../../../redux/store";
 import {DialogsType} from "../../../redux/store";
 import Input from "./Input/Input";
 import UserNav from "./UserNav/UserNav";
@@ -10,13 +10,14 @@ type PropsType = {
     dialogID: string
     user: DialogsType
     messages: Array<MessagesType>
-
+    dispatch:(action: ActionTypes) => void
+    dialogsPage: DialogPageType
 }
 
 
 function Dialog(props: PropsType) {
 
-    debugger
+
     return (
 
         <div className={classes.dialog}>
@@ -41,7 +42,7 @@ function Dialog(props: PropsType) {
 
                     </div> : "")}
 
-            <Input/>
+            <Input messages={props.messages} dialogsPage={props.dialogsPage} dispatch={props.dispatch} />
         </div>
 
     )

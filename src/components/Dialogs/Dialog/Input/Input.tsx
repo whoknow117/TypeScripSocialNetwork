@@ -1,13 +1,30 @@
-import React from 'react';
+import React, {ChangeEvent} from 'react';
 import classes from './Input.module.scss';
 import AddIcon from '@material-ui/icons/Add';
 import SentimentVerySatisfiedIcon from '@material-ui/icons/SentimentVerySatisfied';
 import GifIcon from '@material-ui/icons/Gif';
 import SendIcon from '@material-ui/icons/Send';
+import {ActionTypes, DialogPageType, DialogsType, MessagesType} from "../../../../redux/store";
+import {changeNewMessageTextAC, sendMessageAC} from "../../../../redux/store";
 
-type InputPropsType = {}
 
-const Input: React.FC<InputPropsType> = () => {
+type InputPropsType = {
+    dispatch:(action: ActionTypes) => void
+    dialogsPage: DialogPageType
+    messages: Array<MessagesType>
+}
+
+const Input: React.FC<InputPropsType> = ({messages,dialogsPage,dispatch}) => {
+
+
+    const val = React.createRef<HTMLInputElement>()
+
+    const changeTextCallBack = (e:ChangeEvent<HTMLInputElement>) => {dispatch(changeNewMessageTextAC(val.current ? val.current.value : ""))}
+
+    const sendMessageCallback = () => {
+        console.log(dialogsPage.newMessageBody)
+        dispatch(sendMessageAC(dialogsPage.newMessageBody))}
+
 
     return <div className={classes.wrapper}>
         <div className={classes.buttons}>
@@ -22,8 +39,8 @@ const Input: React.FC<InputPropsType> = () => {
             </div>
         </div>
         <div className={classes.inputBlock}>
-            <input type="text"/>
-            <button className={classes.btn}>
+            <input ref={val} value={ dialogsPage.newMessageBody} onChange={changeTextCallBack}   type="text"/>
+            <button onClick={sendMessageCallback} className={classes.btn}>
                 <SendIcon/>
             </button>
         </div>

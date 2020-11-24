@@ -1,5 +1,6 @@
 import {v1} from "uuid";
-import {act} from "react-dom/test-utils";
+
+
 
 
 
@@ -40,6 +41,7 @@ export type DialogPageType = {
 }
 
 
+
 export type SidebarType = {}
 
 export type StateType = {
@@ -61,12 +63,25 @@ export type AddPostActionType = {
     postText: string
 
 }
+
 export type ChangeNewTextActionType = {
     type: string
     newText: string
 
 }
-export type ActionTypes = AddPostActionType | ChangeNewTextActionType
+
+export type ChangeNewMessageBodyACType = {
+    type: string
+    message: string
+}
+
+export type SendMessageBodyACType =  {
+    type: string
+    body: string
+}
+
+
+export type ActionTypes = AddPostActionType | ChangeNewTextActionType | ChangeNewMessageBodyACType | SendMessageBodyACType
 
 
 export const addPostAC = (postText: string) => {
@@ -81,8 +96,24 @@ export const addPostAC = (postText: string) => {
 export const changeNewTextAC = (newText: string) => {
 
     return {
-        type: 'CHANGE-NEW-TEXT',
+        type: CHANGE_NEW_TEXT,
         newText: newText
+
+    }
+}
+
+export const changeNewMessageTextAC = (text: string) => {
+
+    return {
+        type: CHANGE_NEW_MESSAGE_TEXT,
+        message: text
+    }
+}
+
+export const sendMessageAC = (body: string) => {
+    return {
+        type: SEND_MESSAGE,
+        body: body
 
     }
 }
@@ -134,6 +165,18 @@ let store: RootStateType = {
             this._rerender()
 
 
+        } else if (action.type === CHANGE_NEW_MESSAGE_TEXT ) {
+            this._state.dialogsPage.newMessageBody = action.text
+            this._rerender()
+        }
+        else if (action.type === SEND_MESSAGE) {
+            const newMessage: MessagesType = {
+                id: v1(),
+                message: action.body
+            }
+            this._state.dialogsPage.messages.push(newMessage)
+
+            this._rerender()
         }
     },
 
