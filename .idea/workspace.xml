@@ -10,14 +10,13 @@
   <component name="ChangeListManager">
     <list default="true" id="4ba8a1a0-a1a5-41a9-bee2-c8fc81e359f6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Input/Input.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Input/Input.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Input/Input.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialog/UserNav/UserNav.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialog/UserNav/UserNav.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogList/SingleUserDialogLink/SingleUserDialogLink.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogList/SingleUserDialogLink/SingleUserDialogLink.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialog/UserNav/UserNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialog/UserNav/UserNav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogList/DialogList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogList/DialogList.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderLogo/HeaderLogo.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderLogo/HeaderLogo.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/NavItem/NavItem.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/NavItem/NavItem.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/variables/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/variables/variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +85,7 @@
       <workItem from="1606143748077" duration="3900000" />
       <workItem from="1606150783346" duration="211000" />
       <workItem from="1606155977669" duration="7404000" />
-      <workItem from="1606196274380" duration="5727000" />
+      <workItem from="1606196274380" duration="8451000" />
     </task>
     <servers />
   </component>

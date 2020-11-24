@@ -1,7 +1,10 @@
 import React from 'react';
 import classes from './UserNav.module.scss';
 import {DialogsType} from "../../../../redux/store";
-
+import CallIcon from '@material-ui/icons/Call';
+import VideocamIcon from '@material-ui/icons/Videocam';
+import PersonAddIcon from '@material-ui/icons/PersonAdd';
+import InfoIcon from '@material-ui/icons/Info';
 
 type UserNavPropsType ={
     user: DialogsType
@@ -20,7 +23,20 @@ function UserNav(props: UserNavPropsType) {
                     <span className={classes.time}>В сети: сегодня в 12:30</span>
                 </div>
             </div>
-            <div></div>
+            <nav className={classes.nav}>
+                <div className={classes.item}>
+                    <CallIcon/>
+                </div>
+                <div className={classes.item}>
+                    <VideocamIcon/>
+                </div>
+                <div className={classes.item}>
+                    <PersonAddIcon/>
+                </div>
+                <div className={classes.item}>
+                    <InfoIcon/>
+                </div>
+            </nav>
 
         </div>
     )

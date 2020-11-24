@@ -34,6 +34,25 @@
         color: #575757;
       }
     }
+
+  }
+  .nav {
+    display: flex;
+    margin-left: auto;
+    .item {
+      margin: 0 6px;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      box-shadow: $boxShadowNeuroUp;
+      svg {
+        font-size: 16px;
+        fill: $svgIconColor;
+      }
+    }
   }
 
 }

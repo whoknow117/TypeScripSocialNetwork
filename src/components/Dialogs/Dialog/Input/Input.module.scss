@@ -40,9 +40,28 @@
       margin-right: 8px;
     }
     .btn {
-      display: block;
+
       border:none;
       outline: none;
+      width: 40px;
+      height: 40px;
+      background: $svgIconColor;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: .3s ease-in-out;
+      &:hover {
+        background: #fff;
+        svg {
+          fill: $svgIconColor;
+        }
+      }
+      svg {
+        fill: #fff;
+
+      }
     }
   }
 }
