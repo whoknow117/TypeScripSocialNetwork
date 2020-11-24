@@ -9,6 +9,7 @@
   display: flex;
   padding: 4px 14px;
   align-items: center;
+  background: $silverBackground;
   .userInfo {
     display: flex;
     .image {
@@ -28,7 +29,10 @@
       .title {
 
       }
-      .time {}
+      .time {
+        font-size: 14px;
+        color: #575757;
+      }
     }
   }
 

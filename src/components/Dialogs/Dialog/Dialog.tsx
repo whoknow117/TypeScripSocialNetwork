@@ -39,7 +39,7 @@ function Dialog(props: PropsType) {
                         </div>
 
 
-                         </div> : "")}
+                    </div> : "")}
 
             <Input/>
         </div>
