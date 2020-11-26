@@ -3,9 +3,9 @@
 
 .wrapper {
   margin-top: auto;
-  height: 60px;
+  height: 70px;
   width: 100%;
-  border-top: 1px solid rgba(0,0,0,.1);
+  border-top: 1px solid rgba(183, 183, 183, 0.1);
   display: flex;
   align-items: center;
   background:   #ebebeb;
@@ -38,6 +38,8 @@
       background: rgba(255,255,255,.8);
       border-radius: 5px;
       margin-right: 8px;
+      outline: none;
+      padding-left: 15px;
     }
     .btn {
 

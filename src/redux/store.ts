@@ -166,13 +166,15 @@ let store: RootStateType = {
 
 
         } else if (action.type === CHANGE_NEW_MESSAGE_TEXT ) {
-            this._state.dialogsPage.newMessageBody = action.text
+            this._state.dialogsPage.newMessageBody = action.message
             this._rerender()
         }
         else if (action.type === SEND_MESSAGE) {
+
+
             const newMessage: MessagesType = {
                 id: v1(),
-                message: action.body
+                message: action.body,
             }
             this._state.dialogsPage.messages.push(newMessage)
 

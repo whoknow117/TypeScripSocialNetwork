@@ -16,10 +16,11 @@ type InputPropsType = {
 
 const Input: React.FC<InputPropsType> = ({messages,dialogsPage,dispatch}) => {
 
+    const value = dialogsPage.newMessageBody;
 
     const val = React.createRef<HTMLInputElement>()
 
-    const changeTextCallBack = (e:ChangeEvent<HTMLInputElement>) => {dispatch(changeNewMessageTextAC(val.current ? val.current.value : ""))}
+    const changeTextCallBack = (e:ChangeEvent<HTMLInputElement>) => {dispatch(changeNewMessageTextAC(e.currentTarget.value))}
 
     const sendMessageCallback = () => {
         console.log(dialogsPage.newMessageBody)
@@ -39,7 +40,7 @@ const Input: React.FC<InputPropsType> = ({messages,dialogsPage,dispatch}) => {
             </div>
         </div>
         <div className={classes.inputBlock}>
-            <input ref={val} value={ dialogsPage.newMessageBody} onChange={changeTextCallBack}   type="text"/>
+            <input  value={ value } onChange={changeTextCallBack}   type="text"/>
             <button onClick={sendMessageCallback} className={classes.btn}>
                 <SendIcon/>
             </button>

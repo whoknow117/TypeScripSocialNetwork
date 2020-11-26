@@ -30,7 +30,7 @@ const App: React.FC<AppPropsType> = ({  store}) => {
                 <Header />
                 <Sidebar/>
                 <Route exact path='/profile' render={() => <Profile dispatch={store.dispatch.bind(store)} profilePage={profilePage}/>}/>
-                <Route path="/dialogs" render={() => <Dialogs   dispatch={store.dispatch.bind(store)} dialogsPage={dialogsPage}/>}/>
+                <Route path="/dialogs" render={() => <Dialogs  dispatch={store.dispatch.bind(store)} dialogsPage={dialogsPage}/>}/>
 
 
 

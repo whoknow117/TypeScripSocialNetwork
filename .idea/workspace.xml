@@ -9,11 +9,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ba8a1a0-a1a5-41a9-bee2-c8fc81e359f6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/Content/UserDiscription/UserDiscription.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/Content/UserDiscription/UserDiscription.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Input/Input.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Input/Input.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Input/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Content/Content.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Content/Content.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Content/Content.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Content/Content.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/Avatar/Avatar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/Avatar/Avatar.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/FriendsList/FriendsList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/FriendsList/FriendsList.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/FriendsList/FriendsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/FriendsList/FriendsList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/variables/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/variables/variables.scss" afterDir="false" />
     </list>
@@ -36,12 +46,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Profile/Content" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="C:\projects\student\SocialMedia\my-app\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\student\SocialMedia\my-app\src\components\Profile\Content" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\projects\student\SocialMedia\my-app\src\components\Profile\ProfileInfo" />
       <recent name="C:\projects\student\SocialMedia\my-app\src\components\Header" />
@@ -84,7 +98,10 @@
       <workItem from="1606150783346" duration="211000" />
       <workItem from="1606155977669" duration="7404000" />
       <workItem from="1606196274380" duration="8559000" />
-      <workItem from="1606220504985" duration="6294000" />
+      <workItem from="1606220504985" duration="6367000" />
+      <workItem from="1606234863433" duration="640000" />
+      <workItem from="1606330023012" duration="4084000" />
+      <workItem from="1606369719693" duration="10484000" />
     </task>
     <servers />
   </component>
@@ -128,5 +145,17 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1606057401274" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog.tsx</url>
+          <line>45</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

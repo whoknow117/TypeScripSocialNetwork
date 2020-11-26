@@ -1,0 +1,39 @@
+
+
+.userDiscription {
+  overflow: hidden;
+  .userTitle {
+    margin: 4px 10px 10px 10px;
+  }
+  .text {
+    margin: 4px 10px 60px 10px;
+  }
+  .list {
+
+    list-style: none;
+    .lineWrapp {
+      position: relative;
+      .border {
+        width: 100%;
+        position: absolute;
+        border-bottom: 1px solid silver;
+        left: 0;
+      }
+      .itemTitle {
+        display: inline;
+        background: #fff;
+        z-index: 101;
+        color: #2b2b2b;
+        font-weight: 500;
+        font-family: Montserrat;
+        position: relative;
+        align-items: center;
+
+
+        span {}
+      }
+    }
+
+  }
+}
+

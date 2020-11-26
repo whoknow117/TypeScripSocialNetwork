@@ -7,70 +7,74 @@
   position: relative;
   height: 100%;
   flex-direction: column;
+  .messageWrap {
+    overflow: auto;
+    height: 100%;
+    .message {
+      display: flex;
+      width: 600px;
+      max-width: 600px;
+      margin: 30px 0px 0 30px;
 
-  .message {
-    display: flex;
-    width: 600px;
-    max-width: 600px;
-    margin: 30px 0px 0 30px;
-
-    .image {
-      display: block;
-
-      width: 36px;
-      height: 36px;
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-
-      position: relative;
-      border-radius: 50%;
-      overflow: hidden;
-
-      img {
+      .image {
         display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
 
-    .content {
-      width: 80%;
-      z-index: 101;
-      background: #f6f6f6;
-      margin-left: 20px;
-      padding: 20px;
-      border-radius: 10px 10px 10px 10px;
-      position: relative;
-      box-shadow: 0 1px 4px rgba(0,0,0,.2);
+        width: 36px;
+        height: 36px;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
 
-      &:before {
-        content: '';
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        background:  #f6f6f6;
-        left: -5px;
-        transform: rotate(45deg);
-        top: 20%;
-        z-index: 11;
-        box-shadow: -2px 2px 2px rgba(0,0,0,.1);
-      }
-      .name {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 8px;
-        .title {
-          margin-left: 10px;
+        position: relative;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
+      }
 
-        .time {
-          margin-right: 10px;
+      .content {
+        width: 80%;
+        z-index: 101;
+        background: #f6f6f6;
+        margin-left: 20px;
+        padding: 20px;
+        border-radius: 10px 10px 10px 10px;
+        position: relative;
+        box-shadow: 0 1px 4px rgba(0,0,0,.2);
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background:  #f6f6f6;
+          left: -5px;
+          transform: rotate(45deg);
+          top: 20%;
+          z-index: 11;
+          box-shadow: -2px 2px 2px rgba(0,0,0,.1);
+        }
+        .name {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 8px;
+          .title {
+            margin-left: 10px;
+          }
+
+          .time {
+            margin-right: 10px;
+          }
         }
       }
     }
   }
+
 
 }
 
