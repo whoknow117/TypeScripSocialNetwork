@@ -28,16 +28,68 @@ const UserDiscription: React.FC<UserDiscriptionType> = () => {
 
         </ul>
         <ul className={classes.list}>
-            <span className={classes.itemTitle}>Основная информация</span>
+            <div className={classes.lineWrapp}>
+                <span className={classes.itemTitle}>
+                    Общая информация
+
+                </span>
+                <span className={classes.border}>
+
+                    </span>
+            </div>
+            <li className={classes.item}>пол: <span className={classes.answer}>муж</span></li>
+            <li className={classes.item}>день рождения: <span className={classes.answer}>33года</span></li>
+            <li className={classes.item}>места учебы: <span className={classes.answer}>СТИ</span></li>
+            <li className={classes.item}>увлечения: <span className={classes.answer}>игры, фильмы, музыка</span></li>
+            <li className={classes.item}>место работы: <span className={classes.answer}>магазин Снабженец</span></li>
         </ul>
         <ul className={classes.list}>
-            <span className={classes.itemTitle}>Контактная информация</span>
+            <div className={classes.lineWrapp}>
+                <span className={classes.itemTitle}>
+                    Общая информация
+
+                </span>
+                <span className={classes.border}>
+
+                    </span>
+            </div>
+            <li className={classes.item}>пол: <span className={classes.answer}>муж</span></li>
+            <li className={classes.item}>день рождения: <span className={classes.answer}>33года</span></li>
+            <li className={classes.item}>места учебы: <span className={classes.answer}>СТИ</span></li>
+            <li className={classes.item}>увлечения: <span className={classes.answer}>игры, фильмы, музыка</span></li>
+            <li className={classes.item}>место работы: <span className={classes.answer}>магазин Снабженец</span></li>
         </ul>
         <ul className={classes.list}>
-            <span className={classes.itemTitle}>Образование</span>
+            <div className={classes.lineWrapp}>
+                <span className={classes.itemTitle}>
+                    Общая информация
+
+                </span>
+                <span className={classes.border}>
+
+                    </span>
+            </div>
+            <li className={classes.item}>пол: <span className={classes.answer}>муж</span></li>
+            <li className={classes.item}>день рождения: <span className={classes.answer}>33года</span></li>
+            <li className={classes.item}>места учебы: <span className={classes.answer}>СТИ</span></li>
+            <li className={classes.item}>увлечения: <span className={classes.answer}>игры, фильмы, музыка</span></li>
+            <li className={classes.item}>место работы: <span className={classes.answer}>магазин Снабженец</span></li>
         </ul>
         <ul className={classes.list}>
-            <span className={classes.itemTitle}>Карьера</span>
+            <div className={classes.lineWrapp}>
+                <span className={classes.itemTitle}>
+                    Общая информация
+
+                </span>
+                <span className={classes.border}>
+
+                    </span>
+            </div>
+            <li className={classes.item}>пол: <span className={classes.answer}>муж</span></li>
+            <li className={classes.item}>день рождения: <span className={classes.answer}>33года</span></li>
+            <li className={classes.item}>места учебы: <span className={classes.answer}>СТИ</span></li>
+            <li className={classes.item}>увлечения: <span className={classes.answer}>игры, фильмы, музыка</span></li>
+            <li className={classes.item}>место работы: <span className={classes.answer}>магазин Снабженец</span></li>
         </ul>
 
     </div>

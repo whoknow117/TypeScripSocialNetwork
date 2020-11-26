@@ -9,22 +9,23 @@ import UserDiscription from "./UserDiscription/UserDiscription";
 
 type ContentType = {
     profilePage: ProfilePageType
-    dispatch:(action: ActionTypes) => void
+    dispatch: (action: ActionTypes) => void
     posts: Array<PostsType>
 }
 
 
-const Content: React.FC<ContentType> = ({dispatch, posts,   profilePage}) => {
+const Content: React.FC<ContentType> = ({dispatch, posts, profilePage}) => {
 
     const value = profilePage.newPostText;
+    let postMessageRef = React.createRef<HTMLTextAreaElement>();
 
+    const changeNewText = () => {
+        dispatch(changeNewTextAC(postMessageRef.current ? postMessageRef.current.value : ""))
+    }
 
-    let postMessageRef  = React.createRef<HTMLTextAreaElement>();
-
-    const changeNewText = () => {dispatch(changeNewTextAC(postMessageRef.current ? postMessageRef.current.value : ""))}
-
-    const addPost = () => {dispatch(addPostAC(profilePage.newPostText))}
-
+    const addPost = () => {
+        dispatch(addPostAC(profilePage.newPostText))
+    }
 
 
     return <div className={classes.content}>
@@ -35,7 +36,7 @@ const Content: React.FC<ContentType> = ({dispatch, posts,   profilePage}) => {
                 <textarea value={value} onChange={changeNewText} ref={postMessageRef}></textarea>
 
 
-                <button onClick={addPost}  >Add</button>
+                <button onClick={addPost}>Add</button>
             </div>
             <div className={classes.postWrapper}>
                 {posts.map(p => {

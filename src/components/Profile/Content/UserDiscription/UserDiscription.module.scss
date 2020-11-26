@@ -3,20 +3,32 @@
 .userDiscription {
   overflow: hidden;
   .userTitle {
-    margin: 4px 10px 10px 10px;
+
   }
   .text {
-    margin: 4px 10px 60px 10px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
   }
   .list {
 
+
     list-style: none;
+    &:first-child {
+      margin-bottom: 20px;
+    }
     .lineWrapp {
       position: relative;
+      display: flex;
+
+
       .border {
-        width: 100%;
+        width: 98%;
+        display: block;
         position: absolute;
-        border-bottom: 1px solid silver;
+        margin-left: 22px;
+        border-bottom: 1px solid rgba(0,0,0,.1);
         left: 0;
       }
       .itemTitle {
@@ -28,6 +40,7 @@
         font-family: Montserrat;
         position: relative;
         align-items: center;
+        padding-right: 14px;
 
 
         span {}
