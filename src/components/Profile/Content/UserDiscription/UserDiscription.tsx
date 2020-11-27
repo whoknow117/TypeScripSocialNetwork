@@ -70,9 +70,9 @@ const UserDiscription: React.FC<UserDiscriptionType> = () => {
             <div className={classes.separate}>
                 <ul className={classes.list}>
 
-                    <li className={classes.item}>Политические взгляды:</li>
-                    <li className={classes.item}>Отношение к курениею:</li>
-                    <li className={classes.item}>Отношение к алкоголю:</li>
+                    <li className={classes.item}>Полит. взгляды:</li>
+                    <li className={classes.item}>Отн. к курениею:</li>
+                    <li className={classes.item}>Отн. к алкоголю:</li>
                     <li className={classes.item}>Главное в людях:</li>
 
 

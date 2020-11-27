@@ -33,15 +33,15 @@ const Content: React.FC<ContentType> = ({dispatch, posts, profilePage}) => {
         <div className={classes.contentWrapp}>
             <UserDiscription/>
             <div className={classes.inputWrapper}>
-                {/*<textarea value={value} onChange={changeNewText} ref={postMessageRef}></textarea>*/}
+                <textarea value={value} onChange={changeNewText} ref={postMessageRef}></textarea>
 
 
-                {/*<button onClick={addPost}>Add</button>*/}
+                <button onClick={addPost}>Add</button>
             </div>
             <div className={classes.postWrapper}>
-                {/*{posts.map(p => {*/}
-                {/*    return <div key={p.id}>{p.message}</div>*/}
-                {/*})}*/}
+                {posts.map(p => {
+                    return <div key={p.id}>{p.message}</div>
+                })}
             </div>
 
         </div>

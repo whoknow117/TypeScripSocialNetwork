@@ -18,7 +18,7 @@
      .separate {
       display: flex;
        .list:last-child {
-         padding-left: 20px;
+
        }
        
     }
@@ -34,22 +34,26 @@
       display: block;
       list-style: none;
       margin-right: 80px;
+      width: 170px;
+      &:last-child {
 
-
+        width: 50%;
+      }
 
     }
 
 
 }
 .item {
-  font-size: 13px;
-  margin-bottom: 8px;
+  font-size: 15px;
+  margin-bottom: 6px;
+  
 }
 
 .lineWrapp {
   position: relative;
   display: flex;
-
+  margin-bottom: 10px;
 
 
 
@@ -82,8 +86,8 @@
 }
 
 .answer {
-  margin-bottom: 4px;
-  color: #061e9d;
+  margin-bottom: 6px;
+  color: #151515;
   font-weight: 500;
   font-size: 15px;
 }
