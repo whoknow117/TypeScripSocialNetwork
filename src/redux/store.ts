@@ -1,4 +1,6 @@
 import {v1} from "uuid";
+import profileReducer from "./profileReducer";
+import dialogReducer from "./dialogReducer";
 
 
 
@@ -58,27 +60,14 @@ export type RootStateType = {
     dispatch: (action: any) => void
 
 }
-export type AddPostActionType = {
-    type: string
-    postText: string
+export type AddPostActionType = ReturnType<typeof addPostAC>
+export type ChangeNewTextActionType = ReturnType<typeof changeNewTextAC>
 
-}
 
-export type ChangeNewTextActionType = {
-    type: string
-    newText: string
 
-}
+export type ChangeNewMessageBodyACType  = ReturnType<typeof changeNewMessageTextAC>
 
-export type ChangeNewMessageBodyACType = {
-    type: string
-    message: string
-}
-
-export type SendMessageBodyACType =  {
-    type: string
-    body: string
-}
+export type SendMessageBodyACType = ReturnType<typeof sendMessageAC>
 
 
 export type ActionTypes = AddPostActionType | ChangeNewTextActionType | ChangeNewMessageBodyACType | SendMessageBodyACType
@@ -87,10 +76,10 @@ export type ActionTypes = AddPostActionType | ChangeNewTextActionType | ChangeNe
 export const addPostAC = (postText: string) => {
 
     return {
-        type: 'ADD-POST',
+        type: ADD_POST,
         postText: postText
 
-    }
+    } as const
 }
 
 export const changeNewTextAC = (newText: string) => {
@@ -99,7 +88,7 @@ export const changeNewTextAC = (newText: string) => {
         type: CHANGE_NEW_TEXT,
         newText: newText
 
-    }
+    } as const
 }
 
 export const changeNewMessageTextAC = (text: string) => {
@@ -107,7 +96,7 @@ export const changeNewMessageTextAC = (text: string) => {
     return {
         type: CHANGE_NEW_MESSAGE_TEXT,
         message: text
-    }
+    }   as const
 }
 
 export const sendMessageAC = (body: string) => {
@@ -115,8 +104,14 @@ export const sendMessageAC = (body: string) => {
         type: SEND_MESSAGE,
         body: body
 
-    }
+    }   as const
 }
+
+
+
+
+
+
 const userMessageID1:string = v1();
 const userMessageID2:string = v1();
 const userMessageID3:string= v1();
@@ -138,49 +133,7 @@ const SEND_MESSAGE = 'SEND-MESSAGE';
 let store: RootStateType = {
 
 
-    getState() {
-        return this._state
-    },
-    _rerender() {
-        console.log('start')
-    },
-    subscriber(observer: () => void) {
-        this._rerender = observer
-    },
-    dispatch(action) {
-        if (action.type ===  ADD_POST ) {
 
-            const newPost: PostsType = {
-                id: v1(),
-                message: action.postText,
-                likesCount: 0,
-
-            }
-            this._state.profilePage.posts.push(newPost)
-            this._state.profilePage.newPostText = "";
-            this._rerender()
-        } else if (action.type === 'CHANGE-NEW-TEXT') {
-
-            this._state.profilePage.newPostText = action.newText
-            this._rerender()
-
-
-        } else if (action.type === CHANGE_NEW_MESSAGE_TEXT ) {
-            this._state.dialogsPage.newMessageBody = action.message
-            this._rerender()
-        }
-        else if (action.type === SEND_MESSAGE) {
-
-
-            const newMessage: MessagesType = {
-                id: v1(),
-                message: action.body,
-            }
-            this._state.dialogsPage.messages.push(newMessage)
-
-            this._rerender()
-        }
-    },
 
 
     _state: {
@@ -285,7 +238,55 @@ let store: RootStateType = {
 
     },
 
+    getState() {
+        return this._state
+    },
+    _rerender() {
+        console.log('start')
+    },
+    subscriber(observer: () => void) {
+        this._rerender = observer
+    },
+    dispatch(action: ActionTypes) {
 
+        this._state.profilePage = profileReducer(this._state.profilePage, action)
+        this._state.dialogsPage = dialogReducer(this._state.dialogsPage, action)
+
+        this._rerender()
+
+        // if (action.type ===  ADD_POST ) {
+        //
+        //     const newPost: PostsType = {
+        //         id: v1(),
+        //         message: action.postText,
+        //         likesCount: 0,
+        //
+        //     }
+        //     this._state.profilePage.posts.push(newPost)
+        //     this._state.profilePage.newPostText = "";
+        //     this._rerender()
+        // } else if (action.type === 'CHANGE-NEW-TEXT') {
+        //
+        //     this._state.profilePage.newPostText = action.newText
+        //     this._rerender()
+        //
+        //
+        // } else if (action.type === CHANGE_NEW_MESSAGE_TEXT ) {
+        //     this._state.dialogsPage.newMessageBody = action.message
+        //     this._rerender()
+        // }
+        // else if (action.type === SEND_MESSAGE) {
+        //
+        //
+        //     const newMessage: MessagesType = {
+        //         id: v1(),
+        //         message: action.body,
+        //     }
+        //     this._state.dialogsPage.messages.push(newMessage)
+        //
+        //     this._rerender()
+        // }
+    },
 }
 
 

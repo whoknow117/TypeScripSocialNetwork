@@ -8,7 +8,7 @@ import store, {RootStateType, StateType} from "./redux/store";
 
 
 
-let rerenderEntireTree = ( ) => {
+let rerenderEntireTree = () => {
     ReactDOM.render(
         <BrowserRouter>
             <React.StrictMode>
