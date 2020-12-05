@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import './App.scss';
 import { BrowserRouter} from 'react-router-dom';
-import store, {RootStateType, StateType} from "./redux/store";
+import store  from "./redux/store";
 
 
 

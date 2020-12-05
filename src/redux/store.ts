@@ -62,13 +62,8 @@ export type RootStateType = {
 }
 export type AddPostActionType = ReturnType<typeof addPostAC>
 export type ChangeNewTextActionType = ReturnType<typeof changeNewTextAC>
-
-
-
 export type ChangeNewMessageBodyACType  = ReturnType<typeof changeNewMessageTextAC>
-
 export type SendMessageBodyACType = ReturnType<typeof sendMessageAC>
-
 
 export type ActionTypes = AddPostActionType | ChangeNewTextActionType | ChangeNewMessageBodyACType | SendMessageBodyACType
 
@@ -254,38 +249,7 @@ let store: RootStateType = {
 
         this._rerender()
 
-        // if (action.type ===  ADD_POST ) {
-        //
-        //     const newPost: PostsType = {
-        //         id: v1(),
-        //         message: action.postText,
-        //         likesCount: 0,
-        //
-        //     }
-        //     this._state.profilePage.posts.push(newPost)
-        //     this._state.profilePage.newPostText = "";
-        //     this._rerender()
-        // } else if (action.type === 'CHANGE-NEW-TEXT') {
-        //
-        //     this._state.profilePage.newPostText = action.newText
-        //     this._rerender()
-        //
-        //
-        // } else if (action.type === CHANGE_NEW_MESSAGE_TEXT ) {
-        //     this._state.dialogsPage.newMessageBody = action.message
-        //     this._rerender()
-        // }
-        // else if (action.type === SEND_MESSAGE) {
-        //
-        //
-        //     const newMessage: MessagesType = {
-        //         id: v1(),
-        //         message: action.body,
-        //     }
-        //     this._state.dialogsPage.messages.push(newMessage)
-        //
-        //     this._rerender()
-        // }
+
     },
 }
 
