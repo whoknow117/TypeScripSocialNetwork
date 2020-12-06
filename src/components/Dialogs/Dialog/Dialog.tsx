@@ -1,9 +1,10 @@
 import React from 'react';
 import classes from './Dialog.module.scss';
-import {ActionTypes, DialogPageType, MessagesType} from "../../../redux/store";
-import {DialogsType} from "../../../redux/store";
+import { DialogPageType, MessagesType} from "../../../redux/dialogReducer";
+import {DialogsType} from "../../../redux/dialogReducer";
 import Input from "./Input/Input";
 import UserNav from "./UserNav/UserNav";
+import {ActionTypes} from "../../../redux/redux-store";
 
 type PropsType = {
 

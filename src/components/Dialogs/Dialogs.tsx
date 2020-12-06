@@ -3,7 +3,8 @@ import classes from './Dialogs.module.scss';
 import {BrowserRouter, Route} from "react-router-dom";
 import DialogList from "./DialogList/DialogList";
 import Dialog from "./Dialog/Dialog";
-import {ActionTypes, DialogPageType, MessagesType} from '../../redux/store';
+import {  DialogPageType, MessagesType} from '../../redux/dialogReducer';
+import {ActionTypes} from "../../redux/redux-store";
 
 
 type PropsType = {

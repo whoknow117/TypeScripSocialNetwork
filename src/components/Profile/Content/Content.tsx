@@ -1,8 +1,10 @@
 import React from 'react';
 import classes from './Content.module.scss';
-import {ActionTypes, PostsType, ProfilePageType} from "../../../redux/store";
+import {PostsType} from "../../../redux/profileReducer";
+import {ActionTypes} from "../../../redux/redux-store";
 import {addPostAC, changeNewTextAC} from "../../../redux/profileReducer";
 import UserDiscription from "./UserDiscription/UserDiscription";
+import {ProfilePageType} from "../../../redux/profileReducer";
 
 
 type ContentType = {
