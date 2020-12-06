@@ -5,7 +5,7 @@ import SentimentVerySatisfiedIcon from '@material-ui/icons/SentimentVerySatisfie
 import GifIcon from '@material-ui/icons/Gif';
 import SendIcon from '@material-ui/icons/Send';
 import {ActionTypes, DialogPageType, DialogsType, MessagesType} from "../../../../redux/store";
-import {changeNewMessageTextAC, sendMessageAC} from "../../../../redux/store";
+import {changeNewMessageTextAC, sendMessageAC} from "../../../../redux/dialogReducer";
 
 
 type InputPropsType = {

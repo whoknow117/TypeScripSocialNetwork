@@ -10,9 +10,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4ba8a1a0-a1a5-41a9-bee2-c8fc81e359f6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Input/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Content/Content.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Content/Content.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/dialogReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profileReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profileReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
@@ -101,7 +102,8 @@
       <workItem from="1606539184806" duration="6313000" />
       <workItem from="1606995279110" duration="2687000" />
       <workItem from="1607009950189" duration="722000" />
-      <workItem from="1607179543595" duration="1226000" />
+      <workItem from="1607179543595" duration="3073000" />
+      <workItem from="1607262560495" duration="4855000" />
     </task>
     <servers />
   </component>
@@ -119,32 +121,6 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="518" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604231700874">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="518" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1604231700874" />
-    <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602861438168">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1602861438168" />
-    <state x="277" y="77" key="SettingsEditor" timestamp="1604209479461">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1604209479461" />
-    <state x="0" y="0" width="1204" height="598" key="dock-window-1" timestamp="1604230747329">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="0" y="0" width="1204" height="598" key="dock-window-1/0.0.1536.864@0.0.1536.864" timestamp="1604230747329" />
-    <state x="425" y="197" key="run.anything.popup" timestamp="1606203107912">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1606203107912" />
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1606057401274">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1606057401274" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

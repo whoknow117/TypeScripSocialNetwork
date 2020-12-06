@@ -1,9 +1,7 @@
-import React, {ChangeEvent, useState} from 'react';
+import React from 'react';
 import classes from './Content.module.scss';
 import {ActionTypes, PostsType, ProfilePageType} from "../../../redux/store";
-import {v1} from "uuid";
-import {addPostAC, changeNewTextAC} from "../../../redux/store";
-import SupperInput from "../../common/SupperInput/SupperInput";
+import {addPostAC, changeNewTextAC} from "../../../redux/profileReducer";
 import UserDiscription from "./UserDiscription/UserDiscription";
 
 
@@ -34,7 +32,6 @@ const Content: React.FC<ContentType> = ({dispatch, posts, profilePage}) => {
             <UserDiscription/>
             <div className={classes.inputWrapper}>
                 <textarea value={value} onChange={changeNewText} ref={postMessageRef}></textarea>
-
 
                 <button onClick={addPost}>Add</button>
             </div>

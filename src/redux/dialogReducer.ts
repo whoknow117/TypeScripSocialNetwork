@@ -1,15 +1,21 @@
 import {ActionTypes, DialogPageType, MessagesType} from "./store";
 import {v1} from "uuid";
 
- const dialogReducer = (state: DialogPageType, action: ActionTypes) => {
-    const CHANGE_NEW_MESSAGE_TEXT = 'CHANGE-NEW-MESSAGE-TEXT';
-    const SEND_MESSAGE = 'SEND-MESSAGE';
 
-     if (action.type === CHANGE_NEW_MESSAGE_TEXT ) {
+
+export type ChangeNewMessageBodyACType  = ReturnType<typeof changeNewMessageTextAC>
+export type SendMessageBodyACType = ReturnType<typeof sendMessageAC>
+
+
+
+ const dialogReducer = (state: DialogPageType, action: ActionTypes) => {
+
+
+     if (action.type === 'CHANGE-NEW-MESSAGE-TEXT' ) {
          state.newMessageBody = action.message;
 
     }
-    else if (action.type === SEND_MESSAGE) {
+    else if (action.type === 'SEND-MESSAGE') {
 
         let body = state.newMessageBody;
         const newMessage: MessagesType = {
@@ -22,5 +28,22 @@ import {v1} from "uuid";
 
     return state;
 }
+
+export const changeNewMessageTextAC = (text: string) => {
+
+    return {
+        type: 'CHANGE-NEW-MESSAGE-TEXT',
+        message: text
+    }   as const
+}
+
+export const sendMessageAC = (body: string) => {
+    return {
+        type: 'SEND-MESSAGE',
+        body: body
+
+    }   as const
+}
+
 
 export default dialogReducer;

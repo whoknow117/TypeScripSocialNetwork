@@ -1,22 +1,42 @@
 import {
     ActionTypes,
-    MessagesType,
+
     PostsType,
     ProfilePageType,
-    StateType,
-    ChangeNewTextActionType,
-    AddPostActionType
+
+
+
 } from "./store";
 import {v1} from "uuid";
 
-const ADD_POST = 'ADD-POST';
-const CHANGE_NEW_TEXT = 'CHANGE-NEW-TEXT';
+export type  AddPostActionType = ReturnType<typeof addPostAC>
+export type ChangeNewTextActionType = ReturnType<typeof changeNewTextAC>
 
+
+
+
+export const addPostAC = (postText: string) => {
+
+    return {
+        type: 'ADD-POST',
+        postText: postText
+
+    } as const
+}
+
+export const changeNewTextAC = (newText: string) => {
+
+    return {
+        type: 'CHANGE-NEW-TEXT',
+        newText: newText
+
+    } as const
+}
 
 
 
   const profileReducer = (state:ProfilePageType, action: ActionTypes) => {
-    if (action.type ===  ADD_POST ) {
+    if (action.type ===  'ADD-POST' ) {
 
         const newPost: PostsType = {
             id: v1(),
@@ -27,7 +47,7 @@ const CHANGE_NEW_TEXT = 'CHANGE-NEW-TEXT';
          state.posts.push(newPost)
          state.newPostText = "";
 
-    } else if (action.type === CHANGE_NEW_TEXT) {
+    } else if (action.type === 'CHANGE-NEW-TEXT') {
 
          state.newPostText = action.newText
 
