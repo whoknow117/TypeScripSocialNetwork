@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Content.module.scss';
+import classes from './ContentContainer.module.scss.module.scss';
 import {PostsType} from "../../../redux/profileReducer";
 import {ActionTypes} from "../../../redux/redux-store";
 import {addPostAC, changeNewTextAC} from "../../../redux/profileReducer";
@@ -7,26 +7,24 @@ import UserDiscription from "./UserDiscription/UserDiscription";
 import {ProfilePageType} from "../../../redux/profileReducer";
 
 
-type ContentType = {
+type ContentContainerType = {
     profilePage: ProfilePageType
     dispatch: (action: ActionTypes) => void
     posts: Array<PostsType>
 }
 
 
-const Content: React.FC<ContentType> = ({dispatch, posts, profilePage}) => {
+const ContentContainer: React.FC<ContentContainerType> = ({dispatch, posts, profilePage}) => {
 
     const value = profilePage.newPostText;
     let postMessageRef = React.createRef<HTMLTextAreaElement>();
 
     const changeNewText = () => {
-        // updateNewPostText(text);
         dispatch(changeNewTextAC(postMessageRef.current ? postMessageRef.current.value : ""))
     }
 
     const addPost = () => {
-        // addNewPost();
-        dispatch(addPostAC(value))
+        dispatch(addPostAC(profilePage.newPostText))
     }
 
 
@@ -51,4 +49,4 @@ const Content: React.FC<ContentType> = ({dispatch, posts, profilePage}) => {
     </div>
 }
 
-export default Content;
+export default ContentContainer;

@@ -1,11 +1,4 @@
-import {
-    ActionTypes,
-
-
-
-
-
-} from "./redux-store";
+import {ActionTypes} from "./redux-store";
 import {v1} from "uuid";
 
 export type  AddPostActionType = ReturnType<typeof addPostAC>
