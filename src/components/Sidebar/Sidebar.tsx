@@ -6,11 +6,24 @@ import DvrIcon from '@material-ui/icons/Dvr';
 import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import SettingsIcon from '@material-ui/icons/Settings';
 import NavItem from "./NavItem/NavItem";
+import {NavBarType} from "../../redux/sidebarReducer";
 
 
+export type SidebarPropsType = {
+    sidebar: NavBarType
+}
+
+let iconArr = [
+    <AccountBoxIcon/>,
+    <EmailIcon/>,
+    <DvrIcon/>,
+    <MusicNoteIcon/>,
+    <SettingsIcon/>,
+
+]
 
 
-const Sidebar = () => {
+const Sidebar:React.FC<SidebarPropsType> = ({sidebar }) => {
 
 
     return (
@@ -19,11 +32,9 @@ const Sidebar = () => {
         <nav className={classes.nav}>
 
             <div className={classes.wrap}>
-                <NavItem path='/profile' icon={<AccountBoxIcon/>} title={'Profile'}/>
-                <NavItem path='/dialogs' icon={<EmailIcon/>} title={'Messages'}/>
-                <NavItem path='/asd' icon={<DvrIcon/>} title={'News'}/>
-                <NavItem path='/praaasofile' icon={<MusicNoteIcon/>} title={'Music'}/>
-                <NavItem path='/prodsadfile' icon={<SettingsIcon/>} title={'Settings'}/>
+                {sidebar.map((el,idx) => {
+                    return <NavItem key={el.id} title={el.title} path={el.path} icon={(iconArr[idx])} />
+                })}
             </div>
         </nav>)
 }

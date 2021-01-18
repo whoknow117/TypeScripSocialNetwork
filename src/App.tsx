@@ -22,13 +22,18 @@ const App: React.FC<AppPropsType> = ({  store}) => {
     let state = store.getState();
     let dialogsPage =  state.dialogsPage
     let profilePage =  state.profilePage;
+    let sidebar = state.sidebar
 
 
     return (
         <div className={classes.wrapper}>
 
                 <Header />
-                <Sidebar/>
+             <Sidebar
+                    sidebar={sidebar}
+
+                />
+
                 <Route exact path='/profile' render={() => <Profile dispatch={store.dispatch.bind(store)} profilePage={profilePage}/>}/>
                 <Route path="/dialogs" render={() => <Dialogs  dispatch={store.dispatch.bind(store)} dialogsPage={dialogsPage}/>}/>
 
