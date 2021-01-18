@@ -9,13 +9,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ba8a1a0-a1a5-41a9-bee2-c8fc81e359f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/Content/ContentContainer.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/Content/ContentContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/sidebarReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Content/Content.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Content/Content.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profileReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profileReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +106,8 @@
       <workItem from="1607525937041" duration="372000" />
       <workItem from="1608234590281" duration="246000" />
       <workItem from="1608659543560" duration="1172000" />
-      <workItem from="1610445011153" duration="494000" />
+      <workItem from="1610445011153" duration="571000" />
+      <workItem from="1610964056959" duration="1054000" />
     </task>
     <servers />
   </component>
@@ -141,11 +138,6 @@
           <url>file://$PROJECT_DIR$/src/redux/store.ts</url>
           <line>52</line>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/Profile/Content/Content.tsx</url>
-          <line>18</line>
-          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
