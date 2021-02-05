@@ -3,8 +3,8 @@ import classes from './Profile.module.scss';
 import Avatar from "./ProfileInfo/Avatar/Avatar";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 import Content from "./Content/Content";
-import {ActionTypes} from "../../redux/redux-store";
-import {ProfilePageType} from "../../redux/profileReducer";
+import {ActionTypes} from "../../types/types";
+import {ProfilePageType} from "../../types/types";
 
 
 export type ProfilePropsType = {

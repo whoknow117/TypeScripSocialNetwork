@@ -1,5 +1,5 @@
 import {v1} from "uuid";
-import {ActionTypes} from "./redux-store";
+import {ActionTypes} from "../types/types";
 
 export type SidebarType = {
     id: string

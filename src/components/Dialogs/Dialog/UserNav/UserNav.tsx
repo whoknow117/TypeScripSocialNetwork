@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './UserNav.module.scss';
-import {DialogsType} from "../../../../redux/dialogReducer";
+import {DialogsType} from "../../../../types/types";
 import CallIcon from '@material-ui/icons/Call';
 import VideocamIcon from '@material-ui/icons/Videocam';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';

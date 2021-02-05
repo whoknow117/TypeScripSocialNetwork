@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './DialogList.module.scss';
-import {DialogsType} from "../../../redux/dialogReducer";
+import {DialogsType} from "../../../types/types";
 import SingleUserDialogLink from './SingleUserDialogLink/SingleUserDialogLink';
 
 

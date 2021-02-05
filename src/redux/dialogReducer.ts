@@ -1,29 +1,12 @@
-import {ActionTypes} from "./redux-store";
+import {ActionTypes} from "../types/types";
 import {v1} from "uuid";
+import {DialogPageType, MessagesType} from "../types/types";
 
 
 export type ChangeNewMessageBodyACType = ReturnType<typeof changeNewMessageTextAC>
 export type SendMessageBodyACType = ReturnType<typeof sendMessageAC>
 
-export type DialogsType = {
-    img: string
-    id: string
-    name: string
-    message: string
-}
-export type MessagesType = {
 
-    id: string
-    message: string
-}
-
-export type DialogPageType = {
-
-    dialogs: Array<DialogsType>
-    messages: Array<MessagesType>
-    newMessageBody: string
-
-}
 
 let initialState: DialogPageType = {
 

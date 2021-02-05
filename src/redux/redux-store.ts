@@ -1,9 +1,11 @@
 import {combineReducers, createStore, Store} from "redux";
-import profileReducer, {AddPostActionType, ChangeNewTextActionType, ProfilePageType} from "./profileReducer";
-import dialogReducer, {ChangeNewMessageBodyACType, DialogPageType, SendMessageBodyACType} from "./dialogReducer";
+import profileReducer    from "./profileReducer";
+import dialogReducer    from "./dialogReducer";
 import sidebarReducer from "./sidebarReducer";
+import {ActionTypes, DialogPageType, ProfilePageType} from "../types/types";
 
 
+debugger
 
 export type StateType = {
     profilePage: ProfilePageType
@@ -14,7 +16,7 @@ export type StateType = {
 
 
 
-export type ActionTypes = AddPostActionType | ChangeNewTextActionType | ChangeNewMessageBodyACType | SendMessageBodyACType
+
 export type  StateReducersType = ReturnType<typeof reducers>
 
 

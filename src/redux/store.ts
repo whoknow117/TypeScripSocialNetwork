@@ -1,5 +1,5 @@
 import {v1} from "uuid";
-import profileReducer, {PostsType} from "./profileReducer";
+import profileReducer  from "./profileReducer";
 import dialogReducer from "./dialogReducer";
 
 // export type DialogsType = {

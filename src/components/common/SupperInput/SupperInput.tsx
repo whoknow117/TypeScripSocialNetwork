@@ -1,5 +1,5 @@
 import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, TextareaHTMLAttributes} from 'react'
-import {ActionTypes} from "../../../redux/redux-store";
+import {ActionTypes} from "../../../types/types";
 
 
 
