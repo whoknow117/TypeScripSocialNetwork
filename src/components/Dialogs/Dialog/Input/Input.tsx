@@ -13,9 +13,10 @@ type InputPropsType = {
     dispatch:(action: ActionTypes) => void
     dialogsPage: DialogPageType
     messages: Array<MessagesType>
+    dialogID: string
 }
 
-const Input: React.FC<InputPropsType> = ({messages,dialogsPage,dispatch}) => {
+const Input: React.FC<InputPropsType> = ({dialogID,messages,dialogsPage,dispatch}) => {
 
     const value = dialogsPage.newMessageBody;
 
@@ -25,7 +26,7 @@ const Input: React.FC<InputPropsType> = ({messages,dialogsPage,dispatch}) => {
 
     const sendMessageCallback = () => {
         console.log(dialogsPage.newMessageBody)
-        dispatch(sendMessageAC(dialogsPage.newMessageBody))}
+        dispatch(sendMessageAC(dialogsPage.newMessageBody,dialogID))}
 
 
     return <div className={classes.wrapper}>

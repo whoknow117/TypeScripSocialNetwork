@@ -1,5 +1,10 @@
 import {addPostAC, changeNewTextAC} from "../redux/profileReducer";
-import {ChangeNewMessageBodyACType, SendMessageBodyACType} from "../redux/dialogReducer";
+import {
+
+    changeNewMessageTextAC,
+    sendMessageAC,
+
+} from "../redux/dialogReducer";
 
 export type DialogsType = {
     img: string
@@ -11,6 +16,12 @@ export type DialogsType = {
 export type  AddPostActionType = ReturnType<typeof addPostAC>
 export type ChangeNewTextActionType = ReturnType<typeof changeNewTextAC>
 
+
+export type MessageStateType = {
+    [key:string]: Array<MessagesType>
+}
+
+
 export type MessagesType = {
 
     id: string
@@ -20,11 +31,12 @@ export type MessagesType = {
 export type DialogPageType = {
 
     dialogs: Array<DialogsType>
-    messages: Array<MessagesType>
+    messages: MessageStateType
     newMessageBody: string
 
 }
-
+export type ChangeNewMessageBodyACType = ReturnType<typeof changeNewMessageTextAC>
+export type SendMessageBodyACType = ReturnType<typeof sendMessageAC>
 
 export type PostsType = {
 

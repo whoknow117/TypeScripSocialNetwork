@@ -45,7 +45,7 @@ function Dialog(props: PropsType) {
                        </div>  )}
                </div>
 
-            <Input messages={props.messages} dialogsPage={props.dialogsPage} dispatch={props.dispatch} />
+            <Input dialogID={props.dialogID} messages={props.messages} dialogsPage={props.dialogsPage} dispatch={props.dispatch} />
         </div>
 
     )

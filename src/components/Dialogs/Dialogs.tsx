@@ -25,13 +25,15 @@ function Dialogs(props: PropsType) {
 
             {dialogs.map(d=>{
                 let path = '/dialogs/' + d.id;
+
+                let data =  messages[d.id]
                 return (
                     <Route path={path} render={() => <Dialog
                         dialogID={d.id}
                         key={d.id}
                         user={d}
                         dialogsPage={props.dialogsPage}
-                        messages={messages}
+                        messages={data}
                         dispatch={props.dispatch}
                     />}/>
                 )
