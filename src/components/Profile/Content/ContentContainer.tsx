@@ -5,6 +5,7 @@ import {ActionTypes} from "../../../types/types";
 import {addPostAC, changeNewTextAC} from "../../../redux/profileReducer";
 import UserDiscription from "./UserDiscription/UserDiscription";
 import {ProfilePageType} from "../../../types/types";
+import Content from "./Content";
 
 
 type ContentContainerType = {
@@ -19,34 +20,18 @@ const ContentContainer: React.FC<ContentContainerType> = ({dispatch, posts, prof
     const value = profilePage.newPostText;
     let postMessageRef = React.createRef<HTMLTextAreaElement>();
 
-    const changeNewText = () => {
+    const changeNewText = (text:string) => {
         dispatch(changeNewTextAC(postMessageRef.current ? postMessageRef.current.value : ""))
     }
 
-    const addPost = () => {
+    const addPost = (value: string) => {
         dispatch(addPostAC(profilePage.newPostText))
     }
 
 
-    return <div className={classes.content}>
-
-        <div className={classes.contentWrapp}>
-            <UserDiscription/>
-            <div className={classes.inputWrapper}>
-                <textarea value={value} onChange={changeNewText} ref={postMessageRef}></textarea>
-
-                <button onClick={addPost}>Add</button>
-            </div>
-            <div className={classes.postWrapper}>
-                {posts.map(p => {
-                    return <div key={p.id}>{p.message}</div>
-                })}
-            </div>
-
-        </div>
-
-
-    </div>
+    return  (
+        <Content addNewPost={addPost} updateNewPostText={changeNewText} profilePage={profilePage}  posts={posts}/>
+    )
 }
 
 export default ContentContainer;

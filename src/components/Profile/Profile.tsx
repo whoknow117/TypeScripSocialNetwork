@@ -5,6 +5,7 @@ import ProfileInfo from "./ProfileInfo/ProfileInfo";
 import Content from "./Content/Content";
 import {ActionTypes} from "../../types/types";
 import {ProfilePageType} from "../../types/types";
+import ContentContainer from "./Content/ContentContainer";
 
 
 export type ProfilePropsType = {
@@ -18,7 +19,8 @@ const Profile:React.FC<ProfilePropsType> = ({dispatch,  profilePage}) => {
 
     return <div className={classes.profile}>
         <ProfileInfo/>
-        <Content dispatch={dispatch} posts={profilePage.posts}  profilePage={profilePage}/>
+        <ContentContainer  profilePage={profilePage} dispatch={dispatch} posts={profilePage.posts}/>
+        {/*<Content dispatch={dispatch} posts={profilePage.posts}  profilePage={profilePage}/>*/}
     </div>
 }
 

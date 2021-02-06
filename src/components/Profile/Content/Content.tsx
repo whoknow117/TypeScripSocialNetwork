@@ -9,24 +9,25 @@ import {ProfilePageType} from "../../../types/types";
 
 type ContentType = {
     profilePage: ProfilePageType
-    dispatch: (action: ActionTypes) => void
+    updateNewPostText: (text: string) => void
     posts: Array<PostsType>
+    addNewPost: (value: string) => void
 }
 
 
-const Content: React.FC<ContentType> = ({dispatch, posts, profilePage}) => {
+const Content: React.FC<ContentType> = ({addNewPost,updateNewPostText, posts, profilePage}) => {
 
     const value = profilePage.newPostText;
     let postMessageRef = React.createRef<HTMLTextAreaElement>();
 
     const changeNewText = () => {
-        // updateNewPostText(text);
-        dispatch(changeNewTextAC(postMessageRef.current ? postMessageRef.current.value : ""))
+        updateNewPostText(postMessageRef.current ? postMessageRef.current.value : "");
+
     }
 
     const addPost = () => {
-        // addNewPost();
-        dispatch(addPostAC(value))
+        addNewPost(value);
+
     }
 
 
