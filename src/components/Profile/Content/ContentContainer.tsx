@@ -21,16 +21,17 @@ const ContentContainer: React.FC<ContentContainerType> = ({dispatch, posts, prof
     let postMessageRef = React.createRef<HTMLTextAreaElement>();
 
     const changeNewText = (text:string) => {
-        dispatch(changeNewTextAC(postMessageRef.current ? postMessageRef.current.value : ""))
+        console.log(profilePage.newPostText)
+        dispatch(changeNewTextAC( text))
     }
 
-    const addPost = (value: string) => {
+    const addPost = () => {
         dispatch(addPostAC(profilePage.newPostText))
     }
 
 
     return  (
-        <Content addNewPost={addPost} updateNewPostText={changeNewText} profilePage={profilePage}  posts={posts}/>
+        <Content value={value} addNewPost={addPost} updateNewPostText={changeNewText} profilePage={profilePage} posts={posts}/>
     )
 }
 

@@ -5,6 +5,7 @@ import {DialogsType} from "../../../types/types";
 import Input from "./Input/Input";
 import UserNav from "./UserNav/UserNav";
 import {ActionTypes} from "../../../types/types";
+import InputContainer from "./Input/InputContainer";
 
 type PropsType = {
 
@@ -45,7 +46,7 @@ function Dialog(props: PropsType) {
                        </div>  )}
                </div>
 
-            <Input dialogID={props.dialogID} messages={props.messages} dialogsPage={props.dialogsPage} dispatch={props.dispatch} />
+            <InputContainer dialogID={props.dialogID} messages={props.messages} dialogsPage={props.dialogsPage} dispatch={props.dispatch} />
         </div>
 
     )

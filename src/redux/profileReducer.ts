@@ -1,6 +1,7 @@
 
 import {v1} from "uuid";
-import {ActionTypes, PostsType, ProfilePageType} from "../types/types";
+import {ActionTypes, AddPostActionType, ChangeNewTextActionType, PostsType, ProfilePageType} from "../types/types";
+import {act} from "react-dom/test-utils";
 
 
 
@@ -20,7 +21,7 @@ let initialState:ProfilePageType = {
     }
 
 
-export const addPostAC = (postText: string) => {
+export const addPostAC = (postText: string):AddPostActionType => {
 
     return {
         type: 'ADD-POST',
@@ -29,19 +30,25 @@ export const addPostAC = (postText: string) => {
     } as const
 }
 
-export const changeNewTextAC = (newText: string) => {
+export const changeNewTextAC = (newText: string ):ChangeNewTextActionType => {
 
     return {
         type: 'CHANGE-NEW-TEXT',
-        newText: newText
+        newText: newText,
+
 
     } as const
 }
 
 
 
-  const profileReducer = (state:ProfilePageType = initialState , action: ActionTypes) => {
+  const profileReducer = (state:ProfilePageType = initialState , action: ActionTypes):ProfilePageType => {
     switch (action.type){
+        case "CHANGE-NEW-TEXT": {
+            let copyState = {...state}
+            copyState.newPostText = action.newText
+            return copyState;
+        }
         case "ADD-POST": {
             let copyState = {...state}
 
@@ -54,9 +61,8 @@ export const changeNewTextAC = (newText: string) => {
             copyState.posts.push(newPost)
             copyState.newPostText = "";
         }
-        case "CHANGE-NEW-TEXT":{
 
-        }
+
         default: return state;
     }
     // if (action.type ===  'ADD-POST' ) {

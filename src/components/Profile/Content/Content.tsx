@@ -12,12 +12,13 @@ type ContentType = {
     updateNewPostText: (text: string) => void
     posts: Array<PostsType>
     addNewPost: (value: string) => void
+    value: string
 }
 
 
-const Content: React.FC<ContentType> = ({addNewPost,updateNewPostText, posts, profilePage}) => {
+const Content: React.FC<ContentType> = ({value, addNewPost,updateNewPostText, posts, profilePage}) => {
 
-    const value = profilePage.newPostText;
+
     let postMessageRef = React.createRef<HTMLTextAreaElement>();
 
     const changeNewText = () => {

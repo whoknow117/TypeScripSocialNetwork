@@ -20,7 +20,7 @@ const Profile:React.FC<ProfilePropsType> = ({dispatch,  profilePage}) => {
     return <div className={classes.profile}>
         <ProfileInfo/>
         <ContentContainer  profilePage={profilePage} dispatch={dispatch} posts={profilePage.posts}/>
-        {/*<Content dispatch={dispatch} posts={profilePage.posts}  profilePage={profilePage}/>*/}
+
     </div>
 }
 

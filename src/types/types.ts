@@ -1,4 +1,4 @@
-import {addPostAC, changeNewTextAC} from "../redux/profileReducer";
+
 import {
 
     changeNewMessageTextAC,
@@ -13,8 +13,17 @@ export type DialogsType = {
     message: string
 }
 
-export type  AddPostActionType = ReturnType<typeof addPostAC>
-export type ChangeNewTextActionType = ReturnType<typeof changeNewTextAC>
+export type  AddPostActionType = {
+    type: 'ADD-POST'
+    postText: string
+}
+export type ChangeNewTextActionType  = {
+
+    type: 'CHANGE-NEW-TEXT'
+    newText: string
+
+
+}
 
 
 export type MessageStateType = {
@@ -53,4 +62,4 @@ export type ProfilePageType = {
 
 }
 
-export type ActionTypes = AddPostActionType | ChangeNewTextActionType | ChangeNewMessageBodyACType | SendMessageBodyACType
+export type ActionTypes = ChangeNewTextActionType| AddPostActionType  | ChangeNewMessageBodyACType | SendMessageBodyACType

@@ -9,10 +9,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ba8a1a0-a1a5-41a9-bee2-c8fc81e359f6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Input/InputContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialog/Input/Input.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/Content/Content.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Content/Content.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/Content/ContentContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Content/ContentContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profileReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profileReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +119,8 @@
       <workItem from="1612532058498" duration="1795000" />
       <workItem from="1612534828985" duration="2157000" />
       <workItem from="1612548440757" duration="885000" />
-      <workItem from="1612589544508" duration="553000" />
+      <workItem from="1612589544508" duration="1132000" />
+      <workItem from="1612605695122" duration="4437000" />
     </task>
     <servers />
   </component>
@@ -136,11 +142,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/Dialogs/Dialog/Dialog.tsx</url>
-          <line>46</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/redux/store.ts</url>
           <line>52</line>

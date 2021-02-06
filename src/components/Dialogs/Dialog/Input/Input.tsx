@@ -10,23 +10,24 @@ import {ActionTypes} from "../../../../types/types";
 
 
 type InputPropsType = {
-    dispatch:(action: ActionTypes) => void
+
     dialogsPage: DialogPageType
     messages: Array<MessagesType>
-    dialogID: string
+
+    changeText: (text: string) => void
+    sendMessage: () => void
 }
 
-const Input: React.FC<InputPropsType> = ({dialogID,messages,dialogsPage,dispatch}) => {
+const Input: React.FC<InputPropsType> = ({sendMessage,changeText,messages,dialogsPage}) => {
 
     const value = dialogsPage.newMessageBody;
 
     const val = React.createRef<HTMLInputElement>()
 
-    const changeTextCallBack = (e:ChangeEvent<HTMLInputElement>) => {dispatch(changeNewMessageTextAC(e.currentTarget.value))}
+    const changeTextCallBack = (e:ChangeEvent<HTMLInputElement>) => {changeText(e.currentTarget.value)}
 
     const sendMessageCallback = () => {
-        console.log(dialogsPage.newMessageBody)
-        dispatch(sendMessageAC(dialogsPage.newMessageBody,dialogID))}
+        sendMessage()}
 
 
     return <div className={classes.wrapper}>
