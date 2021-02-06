@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "830dc06f7e7b502f60115a1e697adc6d",
+    "revision": "da831219a0364ee39c70fad4372ddcea",
     "url": "/TypeScripSocialNetwork/index.html"
   },
   {
-    "revision": "a033d52578dcd72dac92",
+    "revision": "13df44f5596c86273c26",
     "url": "/TypeScripSocialNetwork/static/css/main.6e13dca1.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/TypeScripSocialNetwork/static/js/2.43a0d3a4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a033d52578dcd72dac92",
-    "url": "/TypeScripSocialNetwork/static/js/main.cfa7f480.chunk.js"
+    "revision": "13df44f5596c86273c26",
+    "url": "/TypeScripSocialNetwork/static/js/main.0d779033.chunk.js"
   },
   {
     "revision": "07fe1b88ac4a2434272c",

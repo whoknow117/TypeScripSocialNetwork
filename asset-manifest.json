@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/TypeScripSocialNetwork/static/css/main.6e13dca1.chunk.css",
-    "main.js": "/TypeScripSocialNetwork/static/js/main.cfa7f480.chunk.js",
-    "main.js.map": "/TypeScripSocialNetwork/static/js/main.cfa7f480.chunk.js.map",
+    "main.js": "/TypeScripSocialNetwork/static/js/main.0d779033.chunk.js",
+    "main.js.map": "/TypeScripSocialNetwork/static/js/main.0d779033.chunk.js.map",
     "runtime-main.js": "/TypeScripSocialNetwork/static/js/runtime-main.eeff1992.js",
     "runtime-main.js.map": "/TypeScripSocialNetwork/static/js/runtime-main.eeff1992.js.map",
     "static/js/2.43a0d3a4.chunk.js": "/TypeScripSocialNetwork/static/js/2.43a0d3a4.chunk.js",
     "static/js/2.43a0d3a4.chunk.js.map": "/TypeScripSocialNetwork/static/js/2.43a0d3a4.chunk.js.map",
     "index.html": "/TypeScripSocialNetwork/index.html",
-    "precache-manifest.0d337e9e5ed48ea1b29354f1b1c1c17c.js": "/TypeScripSocialNetwork/precache-manifest.0d337e9e5ed48ea1b29354f1b1c1c17c.js",
+    "precache-manifest.9edefbcf4beb4237a0e7710f61129acb.js": "/TypeScripSocialNetwork/precache-manifest.9edefbcf4beb4237a0e7710f61129acb.js",
     "service-worker.js": "/TypeScripSocialNetwork/service-worker.js",
     "static/css/main.6e13dca1.chunk.css.map": "/TypeScripSocialNetwork/static/css/main.6e13dca1.chunk.css.map",
     "static/js/2.43a0d3a4.chunk.js.LICENSE.txt": "/TypeScripSocialNetwork/static/js/2.43a0d3a4.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.eeff1992.js",
     "static/js/2.43a0d3a4.chunk.js",
     "static/css/main.6e13dca1.chunk.css",
-    "static/js/main.cfa7f480.chunk.js"
+    "static/js/main.0d779033.chunk.js"
   ]
 }
