@@ -5,18 +5,20 @@ import DialogList from "./DialogList/DialogList";
 import Dialog from "./Dialog/Dialog";
 import {  DialogPageType, MessagesType} from '../../types/types';
 import {ActionTypes} from "../../types/types";
+import {RootStateType} from "../../redux/redux-store";
 
 
 type PropsType = {
-    dialogsPage: DialogPageType
-    dispatch:(action: ActionTypes) => void
+    store: RootStateType
 
 }
 
 function Dialogs(props: PropsType) {
 
-    let dialogs = props.dialogsPage.dialogs;
-    let messages = props.dialogsPage.messages;
+    const state = props.store.getState();
+
+    let dialogs = state.dialogsPage.dialogs;
+    let messages = state.dialogsPage.messages;
 
     return (
 
@@ -32,9 +34,9 @@ function Dialogs(props: PropsType) {
                         dialogID={d.id}
                         key={d.id}
                         user={d}
-                        dialogsPage={props.dialogsPage}
+                        store={props.store}
                         messages={data}
-                        dispatch={props.dispatch}
+
                     />}/>
                 )
             })}

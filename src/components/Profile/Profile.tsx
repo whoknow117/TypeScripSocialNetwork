@@ -6,20 +6,20 @@ import Content from "./Content/Content";
 import {ActionTypes} from "../../types/types";
 import {ProfilePageType} from "../../types/types";
 import ContentContainer from "./Content/ContentContainer";
+import {RootStateType} from "../../redux/redux-store";
 
 
 export type ProfilePropsType = {
-    dispatch:(action: ActionTypes) => void
-    profilePage: ProfilePageType
+    store: RootStateType
 
 }
 
 
-const Profile:React.FC<ProfilePropsType> = ({dispatch,  profilePage}) => {
+const Profile: React.FC<ProfilePropsType> = ({store}) => {
 
     return <div className={classes.profile}>
         <ProfileInfo/>
-        <ContentContainer  profilePage={profilePage} dispatch={dispatch} posts={profilePage.posts}/>
+        <ContentContainer store={store}/>
 
     </div>
 }

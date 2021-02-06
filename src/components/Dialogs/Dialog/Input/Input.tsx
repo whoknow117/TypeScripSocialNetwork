@@ -12,13 +12,13 @@ import {ActionTypes} from "../../../../types/types";
 type InputPropsType = {
 
     dialogsPage: DialogPageType
-    messages: Array<MessagesType>
+
 
     changeText: (text: string) => void
     sendMessage: () => void
 }
 
-const Input: React.FC<InputPropsType> = ({sendMessage,changeText,messages,dialogsPage}) => {
+const Input: React.FC<InputPropsType> = ({sendMessage,changeText, dialogsPage}) => {
 
     const value = dialogsPage.newMessageBody;
 

@@ -6,18 +6,21 @@ import {addPostAC, changeNewTextAC} from "../../../redux/profileReducer";
 import UserDiscription from "./UserDiscription/UserDiscription";
 import {ProfilePageType} from "../../../types/types";
 import Content from "./Content";
+import {RootStateType} from "../../../redux/redux-store";
 
 
 type ContentContainerType = {
-    profilePage: ProfilePageType
-    dispatch: (action: ActionTypes) => void
-    posts: Array<PostsType>
+   store:RootStateType
 }
 
 
-const ContentContainer: React.FC<ContentContainerType> = ({dispatch, posts, profilePage}) => {
+const ContentContainer: React.FC<ContentContainerType> = ({store}) => {
 
-    const value = profilePage.newPostText;
+    const state = store.getState();
+    const value =  state.profilePage.newPostText;
+    const profilePage = state.profilePage;
+    const dispatch = store.dispatch;
+    const posts = state.profilePage.posts
     let postMessageRef = React.createRef<HTMLTextAreaElement>();
 
     const changeNewText = (text:string) => {

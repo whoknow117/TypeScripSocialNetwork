@@ -6,19 +6,21 @@ import Input from "./Input/Input";
 import UserNav from "./UserNav/UserNav";
 import {ActionTypes} from "../../../types/types";
 import InputContainer from "./Input/InputContainer";
+import {RootStateType} from "../../../redux/redux-store";
 
 type PropsType = {
 
     dialogID: string
     user: DialogsType
     messages: Array<MessagesType>
-    dispatch:(action: ActionTypes) => void
-    dialogsPage: DialogPageType
+    store: RootStateType
+
 }
 
 
 function Dialog(props: PropsType) {
 
+    const state = props.store.getState()
 
     return (
 
@@ -46,7 +48,7 @@ function Dialog(props: PropsType) {
                        </div>  )}
                </div>
 
-            <InputContainer dialogID={props.dialogID} messages={props.messages} dialogsPage={props.dialogsPage} dispatch={props.dispatch} />
+            <InputContainer dialogID={props.dialogID}  store={props.store}   />
         </div>
 
     )

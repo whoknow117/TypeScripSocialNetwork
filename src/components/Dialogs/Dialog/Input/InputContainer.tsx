@@ -8,19 +8,23 @@ import {  DialogPageType, DialogsType, MessagesType} from "../../../../types/typ
 import {changeNewMessageTextAC, sendMessageAC} from "../../../../redux/dialogReducer";
 import {ActionTypes} from "../../../../types/types";
 import Input from "./Input";
+import {RootStateType} from "../../../../redux/redux-store";
 
 
 type InputPropsType = {
-    dispatch:(action: ActionTypes) => void
-    dialogsPage: DialogPageType
-    messages: Array<MessagesType>
+    store: RootStateType
     dialogID: string
 
 }
 
-const InputContainer: React.FC<InputPropsType> = ({dialogID,messages,dialogsPage,dispatch}) => {
+const InputContainer: React.FC<InputPropsType> = ({dialogID,store}) => {
 
-    const value = dialogsPage.newMessageBody;
+    const state = store.getState()
+    const dispatch = store.dispatch;
+    const dialogsPage = state.dialogsPage;
+    const messages = state.dialogsPage.dialogs
+
+    const value = state.dialogsPage.newMessageBody;
 
     const val = React.createRef<HTMLInputElement>()
 
@@ -32,7 +36,7 @@ const InputContainer: React.FC<InputPropsType> = ({dialogID,messages,dialogsPage
 
 
     return (
-        <Input sendMessage={sendMessageCallback} changeText={changeTextCallBack} dialogsPage={dialogsPage} messages={messages} />
+        <Input sendMessage={sendMessageCallback} changeText={changeTextCallBack} dialogsPage={dialogsPage}   />
     )
 }
 

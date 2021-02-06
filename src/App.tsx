@@ -8,36 +8,33 @@ import Header from "./components/Header/Header";
 import {RootStateType} from "./redux/redux-store";
 
 
-
-
 type AppPropsType = {
     store: RootStateType
 
 }
 
 
- 
-
-const App: React.FC<AppPropsType> = ({  store}) => {
+const App: React.FC<AppPropsType> = ({store}) => {
 
     let state = store.getState();
-    let dialogsPage =  state.dialogsPage
-    let profilePage =  state.profilePage;
+    let dialogsPage = state.dialogsPage
+    let profilePage = state.profilePage;
     let sidebar = state.sidebar
 
 
     return (
         <div className={classes.wrapper}>
 
-                <Header />
-             <Sidebar
-                    sidebar={sidebar}
+            <Header/>
+            <Sidebar
+                sidebar={sidebar}
 
-                />
+            />
 
-                <Route exact path='/profile' render={() => <Profile dispatch={store.dispatch.bind(store)} profilePage={profilePage}/>}/>
-                <Route path="/dialogs" render={() => <Dialogs  dispatch={store.dispatch.bind(store)} dialogsPage={dialogsPage}/>}/>
-
+            <Route exact path='/profile'
+                   render={() => <Profile store={store}/>}/>
+            <Route path="/dialogs"
+                   render={() => <Dialogs store={store}/>}/>
 
 
         </div>
