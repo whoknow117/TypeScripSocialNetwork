@@ -20,7 +20,7 @@ type PropsType = {
 
 function Dialog(props: PropsType) {
 
-    const state = props.store.getState()
+
 
     return (
 
@@ -48,7 +48,7 @@ function Dialog(props: PropsType) {
                        </div>  )}
                </div>
 
-            <InputContainer dialogID={props.dialogID}  store={props.store}   />
+            <InputContainer dialogID={props.dialogID}    />
         </div>
 
     )
