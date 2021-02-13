@@ -1,6 +1,8 @@
 import {ActionTypes} from "../types/types";
 import {v1} from "uuid";
 import {DialogPageType, MessagesType} from "../types/types";
+import {Simulate} from "react-dom/test-utils";
+
 
 
 
@@ -156,23 +158,43 @@ let initialState: DialogPageType = {
 
 
 const dialogReducer = (state: DialogPageType = initialState, action: ActionTypes) => {
-
-
-    if (action.type === 'CHANGE-NEW-MESSAGE-TEXT') {
-        state.newMessageBody = action.message;
-
-    } else if (action.type === 'SEND-MESSAGE') {
-
-        let body = state.newMessageBody;
-        const newMessage: MessagesType = {
-            id: v1(),
-            message: body,
-        }
-        state.messages[action.dialogID].push(newMessage)
-        state.newMessageBody = ""
+switch (action.type) {
+    case "CHANGE-NEW-MESSAGE-TEXT": {
+        let copyState  = {...state}
+        copyState.newMessageBody = action.message
+        return copyState
     }
+    case "SEND-MESSAGE": {
+        let copyState  = {...state}
+        let newMessage: MessagesType = {
+            id: v1(),
+            message: state.newMessageBody,
 
-    return state;
+        }
+        copyState.messages[action.dialogID].push(newMessage)
+        copyState.newMessageBody = ""
+        return copyState
+    }
+    default: return state;
+}
+
+    // if (action.type === 'CHANGE-NEW-MESSAGE-TEXT') {
+    //     let copyState = {...state}
+    //     copyState.newMessageBody = action.message;
+    //     return copyState
+    //
+    // } else if (action.type === 'SEND-MESSAGE') {
+    //
+    //     let body = state.newMessageBody;
+    //     const newMessage: MessagesType = {
+    //         id: v1(),
+    //         message: body,
+    //     }
+    //     state.messages[action.dialogID].push(newMessage)
+    //     state.newMessageBody = ""
+    // }
+    //
+    // return state;
 }
 
 export const changeNewMessageTextAC = (text: string) => {

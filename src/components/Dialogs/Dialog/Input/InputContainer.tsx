@@ -1,55 +1,38 @@
-import React, {ChangeEvent} from 'react';
+import React  from 'react';
 import {changeNewMessageTextAC, sendMessageAC} from "../../../../redux/dialogReducer";
-import {ActionTypes} from "../../../../types/types";
+
 import Input from "./Input";
-import {RootStateType} from "../../../../redux/redux-store";
-import StoreContext from "../../../../StoreContext";
+import {  StateType} from "../../../../redux/redux-store";
+
+import {connect} from "react-redux";
 
 
-type InputPropsType = {
+let mapStateToProps = (state:StateType) => {
+    return {
 
-    dialogID: string
-
+        dialogsPage: state.dialogsPage
+    }
 }
 
-const InputContainer: React.FC<InputPropsType> = ({dialogID }) => {
 
+let mapDispatchToProps = (dispatch: any) => {
+    return {
+        changeText: (text:string) => {
+            console.log(text);
+            dispatch(changeNewMessageTextAC(text))
+        },
+        sendMessage: (dialogID:string) => {
 
-
-
-    return (
-        <StoreContext.Consumer>
-            {(store) => {
-
-                const state = store.getState()
-                const dispatch = store.dispatch;
-                const dialogsPage = state.dialogsPage;
-                const messages = state.dialogsPage.dialogs
-
-                const value = state.dialogsPage.newMessageBody;
-
-                const val = React.createRef<HTMLInputElement>()
-
-                const changeTextCallBack = (text: string) => {
-                    dispatch(changeNewMessageTextAC(text))
-                }
-
-                const sendMessageCallback = () => {
-
-                    dispatch(sendMessageAC(  dialogID))
-                }
-
-                return  <Input sendMessage={sendMessageCallback}
-                               changeText={changeTextCallBack}
-                               dialogsPage={dialogsPage}   />
-
-            }
-
-
-
-            }
-        </StoreContext.Consumer>
-    )
+            dispatch(sendMessageAC(dialogID))
+        }
+    }
 }
+
+
+
+
+const InputContainer = connect(mapStateToProps, mapDispatchToProps)(Input);
+
+
 
 export default InputContainer;
