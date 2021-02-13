@@ -36,7 +36,7 @@ const InputContainer: React.FC<InputPropsType> = ({dialogID }) => {
 
                 const sendMessageCallback = () => {
 
-                    dispatch(sendMessageAC(dialogsPage.newMessageBody, dialogID))
+                    dispatch(sendMessageAC(  dialogID))
                 }
 
                 return  <Input sendMessage={sendMessageCallback}

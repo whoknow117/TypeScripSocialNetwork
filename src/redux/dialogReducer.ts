@@ -183,10 +183,9 @@ export const changeNewMessageTextAC = (text: string) => {
     } as const
 }
 
-export const sendMessageAC = (body: string,dialogID: string) => {
+export const sendMessageAC = (dialogID: string) => {
     return {
         type: 'SEND-MESSAGE',
-        body: body,
         dialogID: dialogID
 
     } as const
