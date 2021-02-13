@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './App.module.scss';
 import Sidebar from "./components/Sidebar/Sidebar";
-import {BrowserRouter, Route} from "react-router-dom";
+import {  Route} from "react-router-dom";
 import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import Header from "./components/Header/Header";

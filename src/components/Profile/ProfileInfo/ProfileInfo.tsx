@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import classes from './ProfileInfo.module.scss';
 import Avatar from "./Avatar/Avatar";
 import FriendsList from "./FriendsList/FriendsList";

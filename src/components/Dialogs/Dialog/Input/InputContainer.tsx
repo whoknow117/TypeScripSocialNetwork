@@ -1,34 +1,27 @@
-import React, {ChangeEvent} from 'react';
+import React  from 'react';
 import {changeNewMessageTextAC, sendMessageAC} from "../../../../redux/dialogReducer";
-import {ActionTypes} from "../../../../types/types";
 import Input from "./Input";
-import {RootStateType} from "../../../../redux/redux-store";
-import StoreContext from "../../../../StoreContext";
+
 
 
 type InputPropsType = {
 
-    dialogID: string
+
 
 }
 
-const InputContainer: React.FC<InputPropsType> = ({dialogID }) => {
+const SuperInputContainer = connect()(Input);
+
+const InputContainer: React.FC<InputPropsType> = ( ) => {
 
 
 
 
     return (
-        <StoreContext.Consumer>
-            {(store) => {
 
-                const state = store.getState()
                 const dispatch = store.dispatch;
-                const dialogsPage = state.dialogsPage;
-                const messages = state.dialogsPage.dialogs
 
-                const value = state.dialogsPage.newMessageBody;
 
-                const val = React.createRef<HTMLInputElement>()
 
                 const changeTextCallBack = (text: string) => {
                     dispatch(changeNewMessageTextAC(text))
@@ -36,19 +29,18 @@ const InputContainer: React.FC<InputPropsType> = ({dialogID }) => {
 
                 const sendMessageCallback = () => {
 
-                    dispatch(sendMessageAC(dialogsPage.newMessageBody, dialogID))
+                    dispatch(sendMessageAC(store.getState().dialogsPage.newMessageBody, dialogID))
                 }
 
                 return  <Input sendMessage={sendMessageCallback}
                                changeText={changeTextCallBack}
-                               dialogsPage={dialogsPage}   />
+                               dialogsPage={store.getState().dialogsPage}   />
 
             }
 
 
 
-            }
-        </StoreContext.Consumer>
+
     )
 }
 

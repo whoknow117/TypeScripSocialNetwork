@@ -1,4 +1,4 @@
-import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, TextareaHTMLAttributes} from 'react'
+import React, { DetailedHTMLProps, TextareaHTMLAttributes} from 'react'
 import {ActionTypes} from "../../../types/types";
 
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import classes from './Dialog.module.scss';
-import { DialogPageType, MessagesType} from "../../../types/types";
+import {  MessagesType} from "../../../types/types";
 import {DialogsType} from "../../../types/types";
-import Input from "./Input/Input";
+
 import UserNav from "./UserNav/UserNav";
-import {ActionTypes} from "../../../types/types";
+
 import InputContainer from "./Input/InputContainer";
 import {RootStateType} from "../../../redux/redux-store";
 
@@ -48,7 +48,7 @@ function Dialog(props: PropsType) {
                        </div>  )}
                </div>
 
-            <InputContainer dialogID={props.dialogID}    />
+            <InputContainer />
         </div>
 
     )

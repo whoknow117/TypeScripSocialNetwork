@@ -5,6 +5,7 @@ import {
     sendMessageAC,
 
 } from "../redux/dialogReducer";
+import {RootStateType} from "../redux/redux-store";
 
 export type DialogsType = {
     img: string
@@ -63,3 +64,13 @@ export type ProfilePageType = {
 }
 
 export type ActionTypes = ChangeNewTextActionType| AddPostActionType  | ChangeNewMessageBodyACType | SendMessageBodyACType
+
+
+
+// PROVIDER TYPE
+
+
+export type ProviderType = {
+    store: RootStateType
+    children: any
+}
