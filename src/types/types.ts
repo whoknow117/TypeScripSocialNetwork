@@ -15,7 +15,7 @@ export type DialogsType = {
 
 export type  AddPostActionType = {
     type: 'ADD-POST'
-    postText: string
+
 }
 export type ChangeNewTextActionType  = {
 

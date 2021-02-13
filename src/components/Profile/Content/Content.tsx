@@ -1,8 +1,7 @@
-import React from 'react';
+import React, {ChangeEvent} from 'react';
 import classes from './Content.module.scss';
 import {PostsType} from "../../../types/types";
-import {ActionTypes} from "../../../types/types";
-import {addPostAC, changeNewTextAC} from "../../../redux/profileReducer";
+
 import UserDiscription from "./UserDiscription/UserDiscription";
 import {ProfilePageType} from "../../../types/types";
 
@@ -11,23 +10,25 @@ type ContentType = {
     profilePage: ProfilePageType
     updateNewPostText: (text: string) => void
     posts: Array<PostsType>
-    addNewPost: (value: string) => void
-    value: string
+    addNewPost: () => void
+
 }
 
 
-const Content: React.FC<ContentType> = ({value, addNewPost,updateNewPostText, posts, profilePage}) => {
+const Content: React.FC<ContentType> = ({ addNewPost,updateNewPostText, posts, profilePage}) => {
+
+    let value = profilePage.newPostText
 
 
-    let postMessageRef = React.createRef<HTMLTextAreaElement>();
-
-    const changeNewText = () => {
-        updateNewPostText(postMessageRef.current ? postMessageRef.current.value : "");
+    const changeNewText = (e:ChangeEvent<HTMLTextAreaElement>) => {
+        console.log('Text')
+        updateNewPostText(e.currentTarget.value);
 
     }
 
     const addPost = () => {
-        addNewPost(value);
+        console.log("Value")
+        addNewPost();
 
     }
 
@@ -37,7 +38,7 @@ const Content: React.FC<ContentType> = ({value, addNewPost,updateNewPostText, po
         <div className={classes.contentWrapp}>
             <UserDiscription/>
             <div className={classes.inputWrapper}>
-                <textarea value={value} onChange={changeNewText} ref={postMessageRef}></textarea>
+                <textarea value={value} onChange={changeNewText}  ></textarea>
 
                 <button onClick={addPost}>Add</button>
             </div>

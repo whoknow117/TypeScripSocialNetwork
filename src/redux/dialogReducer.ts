@@ -178,23 +178,7 @@ switch (action.type) {
     default: return state;
 }
 
-    // if (action.type === 'CHANGE-NEW-MESSAGE-TEXT') {
-    //     let copyState = {...state}
-    //     copyState.newMessageBody = action.message;
-    //     return copyState
-    //
-    // } else if (action.type === 'SEND-MESSAGE') {
-    //
-    //     let body = state.newMessageBody;
-    //     const newMessage: MessagesType = {
-    //         id: v1(),
-    //         message: body,
-    //     }
-    //     state.messages[action.dialogID].push(newMessage)
-    //     state.newMessageBody = ""
-    // }
-    //
-    // return state;
+
 }
 
 export const changeNewMessageTextAC = (text: string) => {

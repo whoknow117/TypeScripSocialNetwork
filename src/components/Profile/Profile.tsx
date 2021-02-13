@@ -19,7 +19,7 @@ const Profile: React.FC<ProfilePropsType> = ({store}) => {
 
     return <div className={classes.profile}>
         <ProfileInfo/>
-        <ContentContainer store={store}/>
+        <ContentContainer  />
 
     </div>
 }

@@ -21,11 +21,11 @@ let initialState:ProfilePageType = {
     }
 
 
-export const addPostAC = (postText: string):AddPostActionType => {
+export const addPostAC = ():AddPostActionType => {
 
     return {
         type: 'ADD-POST',
-        postText: postText
+
 
     } as const
 }
@@ -51,39 +51,21 @@ export const changeNewTextAC = (newText: string ):ChangeNewTextActionType => {
         }
         case "ADD-POST": {
             let copyState = {...state}
-
             const newPost: PostsType = {
                 id: v1(),
-                message: action.postText,
+                message: copyState.newPostText,
                 likesCount: 0,
 
             }
             copyState.posts.push(newPost)
             copyState.newPostText = "";
+            return copyState;
         }
 
 
         default: return state;
     }
-    // if (action.type ===  'ADD-POST' ) {
-    //
-    //     const newPost: PostsType = {
-    //         id: v1(),
-    //         message: action.postText,
-    //         likesCount: 0,
-    //
-    //     }
-    //      state.posts.push(newPost)
-    //      state.newPostText = "";
-    //
-    // } else if (action.type === 'CHANGE-NEW-TEXT') {
-    //
-    //      state.newPostText = action.newText
-    //
-    //
-    //
-    // }
-    // return state;
+
 }
 
 export default profileReducer;
