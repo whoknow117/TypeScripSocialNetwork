@@ -6,6 +6,7 @@ import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import Header from "./components/Header/Header";
 import {RootStateType} from "./redux/redux-store";
+import Users from "./components/Users/Users";
 
 
 type AppPropsType = {
@@ -33,6 +34,7 @@ const App: React.FC<AppPropsType> = ({store}) => {
                    render={() => <Profile />}/>
             <Route path="/dialogs"
                    render={() => <Dialogs store={store}/>}/>
+            <Route path={"/users"} render={() => <Users/>}/>
 
 
         </div>

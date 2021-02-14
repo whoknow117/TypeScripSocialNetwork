@@ -60,6 +60,9 @@ export type ProfilePageType = {
     newPostText: string
 
 }
+export type UsersPageType = {
+    users: Array<UsersType>
+}
 
 export type FollowActionType = {
     type: "FOLLOW"
