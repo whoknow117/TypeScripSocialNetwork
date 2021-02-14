@@ -7,6 +7,7 @@ import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import SettingsIcon from '@material-ui/icons/Settings';
 import NavItem from "./NavItem/NavItem";
 import {NavBarType} from "../../redux/sidebarReducer";
+import AnnouncementIcon from '@material-ui/icons/Announcement';
 
 
 export type SidebarPropsType = {
@@ -17,6 +18,7 @@ let iconArr = [
     <AccountBoxIcon/>,
     <EmailIcon/>,
     <DvrIcon/>,
+    <AnnouncementIcon/>,
     <MusicNoteIcon/>,
     <SettingsIcon/>,
 

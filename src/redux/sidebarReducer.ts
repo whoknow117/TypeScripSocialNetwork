@@ -16,7 +16,7 @@ let initialState:NavBarType  = [
     {id: v1(), title: 'Messages', path:'/dialogs' },
     {id: v1(), title: 'Users', path:'/users' },
     {id: v1(), title: 'News', path:'/News' },
-    {id: v1(), title: 'Profile', path:'/Music' },
+    {id: v1(), title: 'Music', path:'/Music' },
     {id: v1(), title: 'Profile', path:'/Settings' },
 ]
 
