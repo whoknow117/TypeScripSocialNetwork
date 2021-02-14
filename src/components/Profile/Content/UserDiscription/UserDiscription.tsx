@@ -13,48 +13,48 @@ const UserDiscription: React.FC<UserDiscriptionType> = () => {
             consequuntur ducimus natus obcaecati rem voluptas. Ab autem illum incidunt inventore mollitia repellendus
             sequi veritatis.</p>
         <div className={` ${classes.top}`}>
-            <ul className={classes.list}>
+            {/*<ul className={classes.list}>*/}
 
-                <li className={classes.item}>Пол:</li>
-                <li className={classes.item}>День рождения:</li>
-                <li className={classes.item}>Город:</li>
-                <li className={classes.item}>Место работы:</li>
+            {/*    <li className={classes.item}>Пол:</li>*/}
+            {/*    <li className={classes.item}>День рождения:</li>*/}
+            {/*    <li className={classes.item}>Город:</li>*/}
+            {/*    <li className={classes.item}>Место работы:</li>*/}
 
-            </ul>
-            <ul className={classes.list}>
+            {/*</ul>*/}
+            {/*<ul className={classes.list}>*/}
 
-                <li className={classes.answer}>мужской</li>
-                <li className={classes.answer}>3 сентября 1990</li>
-                <li className={classes.answer}>Северодонецк</li>
-                <li className={classes.answer}>Магазин "Снабженец"</li>
+            {/*    <li className={classes.answer}>мужской</li>*/}
+            {/*    <li className={classes.answer}>3 сентября 1990</li>*/}
+            {/*    <li className={classes.answer}>Северодонецк</li>*/}
+            {/*    <li className={classes.answer}>Магазин "Снабженец"</li>*/}
 
-            </ul>
+            {/*</ul>*/}
         </div>
 
         <div className={classes.table}>
-            <div className={classes.lineWrapp}>
-                <span className={classes.itemTitle}>
-                    Общая информация
+            {/*<div className={classes.lineWrapp}>*/}
+            {/*    <span className={classes.itemTitle}>*/}
+            {/*        Общая информация*/}
 
-                </span>
-                <span className={classes.border}>
+            {/*    </span>*/}
+            {/*    <span className={classes.border}>*/}
 
-                    </span>
-            </div>
-            <div className={classes.separate}>
-                <ul className={classes.list}>
+            {/*        </span>*/}
+            {/*</div>*/}
+            {/*<div className={classes.separate}>*/}
+            {/*    <ul className={classes.list}>*/}
 
-                    <li className={classes.item}>Место учебы:</li>
-                    <li className={classes.item}>Увлечения:</li>
+            {/*        <li className={classes.item}>Место учебы:</li>*/}
+            {/*        <li className={classes.item}>Увлечения:</li>*/}
 
-                </ul>
-                <ul className={classes.list}>
+            {/*    </ul>*/}
+            {/*    <ul className={classes.list}>*/}
 
-                    <li className={classes.answer}>СТИ</li>
-                    <li className={classes.answer}>игры, фильмы, музыка</li>
+            {/*        <li className={classes.answer}>СТИ</li>*/}
+            {/*        <li className={classes.answer}>игры, фильмы, музыка</li>*/}
 
-                </ul>
-            </div>
+            {/*    </ul>*/}
+            {/*</div>*/}
 
         </div>
         <div className={classes.table}>
@@ -70,7 +70,7 @@ const UserDiscription: React.FC<UserDiscriptionType> = () => {
             <div className={classes.separate}>
                 <ul className={classes.list}>
 
-                    <li className={classes.item}>Полит. взгляды:</li>
+
                     <li className={classes.item}>Отн. к курениею:</li>
                     <li className={classes.item}>Отн. к алкоголю:</li>
                     <li className={classes.item}>Главное в людях:</li>
@@ -79,7 +79,7 @@ const UserDiscription: React.FC<UserDiscriptionType> = () => {
                 </ul>
                 <ul className={classes.list}>
 
-                    <li className={classes.answer}>Пихуй</li>
+
                     <li className={classes.answer}>Нейтральное</li>
                     <li className={classes.answer}>Негативное</li>
                     <li className={classes.answer}>Честность, пунктуальность, хорошее чувство юмора</li>

@@ -38,11 +38,11 @@ const Content: React.FC<ContentType> = ({addNewPost, updateNewPostText, posts, p
         <div className={classes.contentWrapp}>
             <UserDiscription/>
             <div className={classes.inputWrapper}>
-                <textarea
+                <textarea className={classes.input}
                     value={value}
                     onChange={changeNewText}>
                 </textarea>
-                <button onClick={addPost}>Add</button>
+                <button className={classes.btn} onClick={addPost}>Post</button>
             </div>
             <div className={classes.postWrapper}>
                 {posts.map(p => {
