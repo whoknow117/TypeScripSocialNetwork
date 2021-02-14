@@ -30,11 +30,13 @@ const App: React.FC<AppPropsType> = ({store}) => {
 
             />
 
-            <Route exact path='/profile'
-                   render={() => <Profile />}/>
-            <Route path="/dialogs"
-                   render={() => <Dialogs store={store}/>}/>
-            <Route path={"/users"} render={() => <Users/>}/>
+           <div className={classes.routeWrapper}>
+               <Route exact path='/profile'
+                      render={() => <Profile />}/>
+               <Route path="/dialogs"
+                      render={() => <Dialogs store={store}/>}/>
+               <Route path="/users" render={() => <Users/>}/>
+           </div>
 
 
         </div>
