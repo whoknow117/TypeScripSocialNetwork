@@ -1,4 +1,4 @@
-import React from 'react';
+
 import {addPostAC, changeNewTextAC} from "../../../redux/profileReducer";
 import { StateType} from "../../../redux/redux-store";
 import {connect} from "react-redux";
@@ -18,7 +18,7 @@ let mapStateToProps = (state:StateType) => {
 let mapDispatchToProps = (dispatch: any) => {
     return {
         updateNewPostText: (text: string) => {
-            console.log(text)
+
             dispatch(changeNewTextAC( text))
         },
         addNewPost: () => {

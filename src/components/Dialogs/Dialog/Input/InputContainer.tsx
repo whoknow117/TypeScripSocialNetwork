@@ -1,13 +1,12 @@
-import React  from 'react';
+import React from 'react';
 import {changeNewMessageTextAC, sendMessageAC} from "../../../../redux/dialogReducer";
-
 import Input from "./Input";
 import {  StateType} from "../../../../redux/redux-store";
-
 import {connect} from "react-redux";
 
 
-let mapStateToProps = (state:StateType) => {
+
+let mapStateToProps = (state:StateType )  => {
     return {
 
         dialogsPage: state.dialogsPage
@@ -18,7 +17,7 @@ let mapStateToProps = (state:StateType) => {
 let mapDispatchToProps = (dispatch: any) => {
     return {
         changeText: (text:string) => {
-            console.log(text);
+
             dispatch(changeNewMessageTextAC(text))
         },
         sendMessage: (dialogID:string) => {

@@ -1,7 +1,7 @@
 
 import {v1} from "uuid";
 import {ActionTypes, AddPostActionType, ChangeNewTextActionType, PostsType, ProfilePageType} from "../types/types";
-import {act} from "react-dom/test-utils";
+
 
 
 

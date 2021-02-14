@@ -1,10 +1,6 @@
 import {ActionTypes} from "../types/types";
 import {v1} from "uuid";
 import {DialogPageType, MessagesType} from "../types/types";
-import {Simulate} from "react-dom/test-utils";
-
-
-
 
 
 
@@ -47,7 +43,7 @@ let initialState: DialogPageType = {
             img: 'https://www.loyatic.eu/wp-content/uploads/2017/11/iStock_000020004182Medium1.jpg'
         },
         {
-            id:'Donald', name: 'Donald',
+            id: 'Donald', name: 'Donald',
             message: 'Классический «Lorem ipsum dolor sit amet…» проход отнести к ремиксов римского философа Цицерона 45 г. до н.э. текст De Finibus Bonorum et Malorum («О крайностями добра и зла») ',
             img: 'https://ak.picdn.net/shutterstock/videos/25017425/thumb/1.jpg'
         },
@@ -81,7 +77,7 @@ let initialState: DialogPageType = {
             {id: v1(), message: 'hiadac'},
             {id: v1(), message: 'acsdci'},
             {id: v1(), message: 'asdc'},
-            ],
+        ],
         ['Andre']: [
             {id: v1(), message: 'asdasd'},
             {id: v1(), message: 'hiadac'},
@@ -143,12 +139,6 @@ let initialState: DialogPageType = {
         ],
 
 
-
-
-
-
-
-
     },
 
 
@@ -157,26 +147,30 @@ let initialState: DialogPageType = {
 }
 
 
-const dialogReducer = (state: DialogPageType = initialState, action: ActionTypes) => {
-switch (action.type) {
-    case "CHANGE-NEW-MESSAGE-TEXT": {
-        let copyState  = {...state}
-        copyState.newMessageBody = action.message
-        return copyState
-    }
-    case "SEND-MESSAGE": {
-        let copyState  = {...state}
-        let newMessage: MessagesType = {
-            id: v1(),
-            message: state.newMessageBody,
+const dialogReducer = (state: DialogPageType = initialState, action: ActionTypes):DialogPageType => {
 
+
+    switch (action.type) {
+        case "CHANGE-NEW-MESSAGE-TEXT": {
+            let copyState = {...state}
+            copyState.newMessageBody = action.message
+            return copyState
         }
-        copyState.messages[action.dialogID].push(newMessage)
-        copyState.newMessageBody = ""
-        return copyState
+        case "SEND-MESSAGE": {
+            let copyState = {...state}
+
+            const newMessage: MessagesType = {
+                id: v1(),
+                message: copyState.newMessageBody
+            }
+
+            copyState.messages[action.dialogID].push(newMessage)
+            copyState.newMessageBody = ""
+            return copyState;
+        }
+        default:
+            return state;
     }
-    default: return state;
-}
 
 
 }

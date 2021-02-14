@@ -15,19 +15,19 @@ type ContentType = {
 }
 
 
-const Content: React.FC<ContentType> = ({ addNewPost,updateNewPostText, posts, profilePage}) => {
+const Content: React.FC<ContentType> = ({addNewPost, updateNewPostText, posts, profilePage}) => {
 
     let value = profilePage.newPostText
 
 
-    const changeNewText = (e:ChangeEvent<HTMLTextAreaElement>) => {
-        console.log('Text')
+    const changeNewText = (e: ChangeEvent<HTMLTextAreaElement>) => {
+
         updateNewPostText(e.currentTarget.value);
 
     }
 
     const addPost = () => {
-        console.log("Value")
+
         addNewPost();
 
     }
@@ -38,8 +38,10 @@ const Content: React.FC<ContentType> = ({ addNewPost,updateNewPostText, posts, p
         <div className={classes.contentWrapp}>
             <UserDiscription/>
             <div className={classes.inputWrapper}>
-                <textarea value={value} onChange={changeNewText}  ></textarea>
-
+                <textarea
+                    value={value}
+                    onChange={changeNewText}>
+                </textarea>
                 <button onClick={addPost}>Add</button>
             </div>
             <div className={classes.postWrapper}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './App.module.scss';
 import Sidebar from "./components/Sidebar/Sidebar";
-import {BrowserRouter, Route} from "react-router-dom";
+import {Route} from "react-router-dom";
 import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import Header from "./components/Header/Header";
@@ -17,8 +17,6 @@ type AppPropsType = {
 const App: React.FC<AppPropsType> = ({store}) => {
 
     let state = store.getState();
-    let dialogsPage = state.dialogsPage
-    let profilePage = state.profilePage;
     let sidebar = state.sidebar
 
 
@@ -32,7 +30,7 @@ const App: React.FC<AppPropsType> = ({store}) => {
             />
 
             <Route exact path='/profile'
-                   render={() => <Profile store={store}/>}/>
+                   render={() => <Profile />}/>
             <Route path="/dialogs"
                    render={() => <Dialogs store={store}/>}/>
 
