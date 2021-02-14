@@ -24,8 +24,8 @@
       }
   }
   span {
-    background: $mainAlternativeColor;
-    box-shadow: 2px 4px 8px rgba(0,0,0,.1);
+    background: $svgIconColor;
+    box-shadow:$boxShadowNeuroUp;
     color: #fff;
   }
 }

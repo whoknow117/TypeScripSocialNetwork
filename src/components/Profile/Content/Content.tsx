@@ -1,43 +1,56 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, {ChangeEvent} from 'react';
 import classes from './Content.module.scss';
-import {ActionTypes, PostsType, ProfilePageType} from "../../../redux/store";
-import {v1} from "uuid";
-import {addPostAC, changeNewTextAC} from "../../../redux/store";
+import {PostsType} from "../../../types/types";
+
+import UserDiscription from "./UserDiscription/UserDiscription";
+import {ProfilePageType} from "../../../types/types";
 
 
 type ContentType = {
     profilePage: ProfilePageType
-    dispatch:(action: ActionTypes) => void
+    updateNewPostText: (text: string) => void
     posts: Array<PostsType>
+    addNewPost: () => void
+
 }
 
 
-const Content: React.FC<ContentType> = ({dispatch, posts,   profilePage}) => {
+const Content: React.FC<ContentType> = ({addNewPost, updateNewPostText, posts, profilePage}) => {
+
+    let value = profilePage.newPostText
 
 
+    const changeNewText = (e: ChangeEvent<HTMLTextAreaElement>) => {
 
+        updateNewPostText(e.currentTarget.value);
 
-    let postMessageRef  = React.createRef<HTMLTextAreaElement>();
+    }
 
-    const changeNewText = () => {dispatch(changeNewTextAC(postMessageRef.current ? postMessageRef.current.value : ""))}
+    const addPost = () => {
 
-    const addPost = () => {dispatch(addPostAC(profilePage.newPostText))}
+        addNewPost();
 
+    }
 
 
     return <div className={classes.content}>
-        <div className={classes.inputWrapper}>
-            <textarea onChange={changeNewText} ref={postMessageRef}></textarea>
 
+        <div className={classes.contentWrapp}>
+            <UserDiscription/>
+            <div className={classes.inputWrapper}>
+                <textarea
+                    value={value}
+                    onChange={changeNewText}>
+                </textarea>
+                <button onClick={addPost}>Add</button>
+            </div>
+            <div className={classes.postWrapper}>
+                {posts.map(p => {
+                    return <div key={p.id}>{p.message}</div>
+                })}
+            </div>
 
-            <button onClick={addPost}  >Add</button>
         </div>
-        <div className={classes.postWrapper}>
-            {posts.map(p => {
-               return <div key={p.id}>{p.message}</div>
-            })}
-        </div>
-
 
 
     </div>

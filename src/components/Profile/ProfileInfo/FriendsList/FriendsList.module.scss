@@ -1,41 +1,50 @@
 
-.title {
-  text-align: center;
-  padding: 30px;
-  font-weight: 400;
-  color: silver;
-}
+.wrapper {
+  background: #fff;
+  padding: 4px;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  .title {
+    text-align: left;
+    padding: 5px 8px;
+    margin-bottom: 8px;
+    font-weight: 400;
+    color: silver;
+    font-size: 13px;
+
+  }
 
 
-.friends {
-  .menu {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    list-style: none;
+  .friends {
+    .menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      list-style: none;
 
-    .item {
+      .item {
+        cursor: pointer;
+        .friendsAvatar {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin: auto;
 
-      .friendsAvatar {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        overflow: hidden;
-        margin: auto;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
 
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-
+          }
         }
-      }
 
-      .friendsName {
-        text-align: center;
-        font-size: 11px;
-        margin: 10px 0;
-      }
+        .friendsName {
+          text-align: center;
+          font-size: 11px;
+          margin: 10px 0;
+        }
 
+      }
     }
   }
 }

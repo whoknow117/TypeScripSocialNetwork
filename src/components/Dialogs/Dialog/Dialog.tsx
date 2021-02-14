@@ -1,28 +1,35 @@
 import React from 'react';
 import classes from './Dialog.module.scss';
-import {MessagesType} from "../../../redux/store";
-import {DialogsType} from "../../../redux/store";
-import Input from "./Input/Input";
+import {  MessagesType} from "../../../types/types";
+import {DialogsType} from "../../../types/types";
+
 import UserNav from "./UserNav/UserNav";
 
-type PropsType = {
-    dialogs: Array<DialogsType>
-    messages: Array<MessagesType>
+import InputContainer from "./Input/InputContainer";
+import {RootStateType} from "../../../redux/redux-store";
 
+type PropsType = {
+
+    dialogID: string
+    user: DialogsType
+    messages: Array<MessagesType>
+    store: RootStateType
 
 }
 
 
-function Dialog (props: PropsType) {
+function Dialog(props: PropsType) {
 
-    debugger
+
+
     return (
 
         <div className={classes.dialog}>
-            <UserNav/>
-            <div className={classes.messages}>
-            </div>
-            <Input/>
+
+            <UserNav user={props.user}/>
+
+
+            <InputContainer dialogID={props.dialogID} img={props.user.img} name={props.user.name} messages={props.messages}  />
         </div>
 
     )

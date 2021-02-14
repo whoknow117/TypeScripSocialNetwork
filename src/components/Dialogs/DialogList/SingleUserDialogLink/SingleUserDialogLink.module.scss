@@ -4,15 +4,18 @@
 .singleUser {
   width: 100%;
   display: block;
-
   border-bottom: 1px solid $borderColor;
-
+  .active {
+    box-shadow: inset 0 2px 7px rgba(0,0,0,.2);
+    background: #f8f8f8;
+    transition:.2s ease-in-out;
+  }
   .link {
     text-decoration: none;
     color: #000;
     display:  flex;
     align-items: center;
-    height: 60px;
+    height: 64px;
     padding-left: 10px;
     overflow: hidden;
 
@@ -38,7 +41,9 @@
       padding-right: 20px;
       .name {
         flex-basis: 50%;
-        line-height: 30px;
+        display: flex;
+        align-items: center;
+        padding-top: 4px;
 
       }
       .message {

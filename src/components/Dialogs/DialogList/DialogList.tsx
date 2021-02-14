@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './DialogList.module.scss';
-import {DialogsType} from "../../../redux/store";
+import {DialogsType} from "../../../types/types";
 import SingleUserDialogLink from './SingleUserDialogLink/SingleUserDialogLink';
 
 
@@ -17,8 +17,8 @@ const DialogList = (props: PropsType) => {
     return (
 
         <div className={classes.dialogList}>
-            {props.dialogs.map((el,inx) => {
-                return <SingleUserDialogLink key={inx} id={el.id} name={el.name} img={el.img} message={el.message}/>
+            {props.dialogs.map((el,idx) => {
+                return <SingleUserDialogLink key={idx} id={el.id} name={el.name} img={el.img} message={el.message}/>
             })}
         </div>
 

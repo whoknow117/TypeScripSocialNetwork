@@ -4,11 +4,13 @@
 
 .userNav {
   min-height: 60px;
-  border-bottom: 1px solid silver;
+  border-bottom: 1px solid rgba(0,0,0,.1);
   display: block;
   display: flex;
-  padding: 4px 14px;
+  padding: 4px 34px 4px 24px;
   align-items: center;
+
+  background: $silverBackground;
   .userInfo {
     display: flex;
     .image {
@@ -28,7 +30,29 @@
       .title {
 
       }
-      .time {}
+      .time {
+        font-size: 14px;
+        color: #575757;
+      }
+    }
+
+  }
+  .nav {
+    display: flex;
+    margin-left: auto;
+    .item {
+      margin: 0 6px;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      box-shadow: $boxShadowNeuroUp;
+      svg {
+        font-size: 16px;
+        fill: $svgIconColor;
+      }
     }
   }
 

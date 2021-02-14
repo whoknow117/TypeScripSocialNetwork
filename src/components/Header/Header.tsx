@@ -25,9 +25,9 @@ const Header = () => {
                 <HeaderLogo/>
                 <Search/>
                 <div className={classes.icons}>
-                    {arrIcons.map((el) => {
+                    {arrIcons.map((el,idx) => {
                         return (
-                            <NavIcons icon={el.icon}/>
+                            <NavIcons key={idx} icon={el.icon}/>
                         )
                     })}
                 </div>

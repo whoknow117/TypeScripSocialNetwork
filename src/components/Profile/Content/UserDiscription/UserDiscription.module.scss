@@ -1,0 +1,93 @@
+@import "src/variables/variables";
+
+.userDiscription {
+  overflow: hidden;
+  .userTitle {
+
+  }
+  .text {
+    margin-bottom: 40px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+  }
+
+  .table {
+    display: flex;
+    flex-direction: column;
+     .separate {
+      display: flex;
+       .list:last-child {
+
+       }
+       
+    }
+
+  }
+  .top {
+    display: flex;
+    flex-display: row;
+  }
+
+    .list {
+      margin-bottom: 20px ;
+      display: block;
+      list-style: none;
+      margin-right: 80px;
+      width: 170px;
+      &:last-child {
+
+        width: 50%;
+      }
+
+    }
+
+
+}
+.item {
+  font-size: 15px;
+  margin-bottom: 6px;
+  
+}
+
+.lineWrapp {
+  position: relative;
+  display: flex;
+  margin-bottom: 10px;
+
+
+
+
+}
+.itemTitle {
+  display: inline;
+  background: #fff;
+  z-index: 101;
+  color: #090909;
+  font-weight: 500;
+  font-family: Montserrat;
+  position: relative;
+  align-items: flex-end;
+  margin-bottom: 10px ;
+  padding-right: 14px;
+
+
+
+}
+
+.border {
+  width: 98%;
+  display: block;
+  position: absolute;
+  margin-left: 22px;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  left: 0;
+  top: 35%;
+}
+
+.answer {
+  margin-bottom: 6px;
+  color: #151515;
+  font-weight: 500;
+  font-size: 15px;
+}

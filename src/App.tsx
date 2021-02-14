@@ -1,12 +1,12 @@
 import React from 'react';
 import classes from './App.module.scss';
 import Sidebar from "./components/Sidebar/Sidebar";
-import {BrowserRouter, Route} from "react-router-dom";
+import {Route} from "react-router-dom";
 import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import Header from "./components/Header/Header";
-import {ActionTypes, RootStateType, StateType} from "./redux/store";
-
+import {RootStateType} from "./redux/redux-store";
+import UsersContainer from "./components/Users/UsersContainer";
 
 
 type AppPropsType = {
@@ -15,22 +15,28 @@ type AppPropsType = {
 }
 
 
- 
-
-const App: React.FC<AppPropsType> = ({  store}) => {
+const App: React.FC<AppPropsType> = ({store}) => {
 
     let state = store.getState();
-    let dialogsPage =  state.dialogsPage
-    let profilePage =  state.profilePage;
+    let sidebar = state.sidebar
+
 
     return (
         <div className={classes.wrapper}>
 
-                <Header />
-                <Sidebar/>
-                <Route exact path='/profile' render={() => <Profile dispatch={store.dispatch.bind(store)} profilePage={profilePage}/>}/>
-                <Route path="/dialogs" render={() => <Dialogs dialogsPage={dialogsPage}/>}/>
+            <Header/>
+            <Sidebar
+                sidebar={sidebar}
 
+            />
+
+           <div className={classes.routeWrapper}>
+               <Route exact path='/profile'
+                      render={() => <Profile />}/>
+               <Route path="/dialogs"
+                      render={() => <Dialogs store={store}/>}/>
+               <Route path="/users" render={() => <UsersContainer />}/>
+           </div>
 
 
         </div>
