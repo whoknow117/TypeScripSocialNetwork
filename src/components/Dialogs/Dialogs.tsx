@@ -31,7 +31,6 @@ function Dialogs(props: PropsType) {
                 return (
                     <Route key={d.id} path={path} render={() => <Dialog
                         dialogID={d.id}
-
                         user={d}
                         store={props.store}
                         messages={data}
