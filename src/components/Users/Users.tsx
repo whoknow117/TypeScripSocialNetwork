@@ -9,7 +9,7 @@ export type UsersPropsType = {
 const Users: React.FC<UsersPropsType> = ({users}) => {
     debugger;
     return <div className={classes.users}>
-        {users.map((us, idx) => <div className={classes.user}>
+        {users.map((us, index) => <div key={index} className={classes.user}>
             <div className={classes.avatar}>
                 <div className={classes.image}>
                     <img src={us.img} alt=""/>
