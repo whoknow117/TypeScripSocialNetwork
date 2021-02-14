@@ -48,7 +48,7 @@ function Dialog(props: PropsType) {
                {/*        </div>  )}*/}
                {/*</div>*/}
 
-            <InputContainer dialogID={props.dialogID}  messages={props.messages}  />
+            <InputContainer dialogID={props.dialogID} img={props.user.img} name={props.user.name} messages={props.messages}  />
         </div>
 
     )

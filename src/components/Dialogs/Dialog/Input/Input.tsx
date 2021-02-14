@@ -8,7 +8,8 @@ import {DialogPageType, MessagesType} from "../../../../types/types";
 
 
 type InputPropsType = {
-
+    img: string
+    name: string
     dialogsPage: DialogPageType
     messages:Array<MessagesType>
     dialogID: string
@@ -16,7 +17,7 @@ type InputPropsType = {
     sendMessage: (dialogID: string) => void
 }
 
-const Input: React.FC<InputPropsType> = ({messages,dialogID, changeText, dialogsPage, sendMessage}) => {
+const Input: React.FC<InputPropsType> = ({img,name,messages,dialogID, changeText, dialogsPage, sendMessage}) => {
 
     const value = dialogsPage.newMessageBody;
 
@@ -32,10 +33,26 @@ const Input: React.FC<InputPropsType> = ({messages,dialogID, changeText, dialogs
     }
 
 
-    return <div>
-        {messages.map(m => {
-            return <div>{m.message}</div>
-        })}
+    return <div className={classes.mainWrapper}>
+        <div className={classes.messageWrap}>
+            {messages.map(m =>
+                <div key={m.id} className={classes.message}>
+                    <div className={classes.image}>
+                        <img src={img} alt="#"/>
+                    </div>
+                    <div className={classes.content}>
+                        <div className={classes.name}>
+                            <h4 className={classes.title}>{name}</h4>
+                            <span className={classes.time}>21:30</span>
+                        </div>
+                        <div>
+                            {m.message}
+                        </div>
+                    </div>
+
+
+                </div>  )}
+        </div>
         <div className={classes.wrapper}>
             <div className={classes.buttons}>
                 <div className={classes.iconBtn}>
