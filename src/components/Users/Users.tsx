@@ -4,17 +4,23 @@ import {UsersType} from "../../types/types";
 
 export type UsersPropsType = {
     users: Array<UsersType>
+    follow: (userID: string) => void
+    unfollow: (userID: string) => void
 }
 
-const Users: React.FC<UsersPropsType> = ({users}) => {
-    debugger;
+const Users: React.FC<UsersPropsType> = ({users, follow, unfollow}) => {
+
+
+
+
     return <div className={classes.users}>
         {users.map((us, index) => <div key={index} className={classes.user}>
             <div className={classes.avatar}>
                 <div className={classes.image}>
                     <img src={us.img} alt=""/>
                 </div>
-                {us.isFollow ? <div className={classes.follow}>unfollow</div> : <div className={classes.follow}>follow</div>}
+                {us.followed ? <button onClick={() => {unfollow(us.id)}} className={classes.follow}>unfollow</button> :
+                    <button onClick={() => {follow(us.id)}} className={classes.follow}>follow</button>}
             </div>
             <div className={classes.userContent}>
                 <div className={classes.userNameWrapper}>

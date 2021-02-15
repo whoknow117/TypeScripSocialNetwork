@@ -66,12 +66,17 @@ export type UsersPageType = {
 
 export type FollowActionType = {
     type: "FOLLOW"
-    isFollow: boolean
+    userID: string
 }
 
 export type UnFollowActionType = {
     type: "UNFOLLOW"
-    isFollow: boolean
+    userID: string
+}
+
+export type SetUsersActionType = {
+    type: "SET-USERS"
+    users: Array<UsersType>
 }
 
 export type ActionTypes =
@@ -81,18 +86,16 @@ export type ActionTypes =
     | SendMessageBodyACType
     | UnFollowActionType
     | FollowActionType
-
-
-
+    | SetUsersActionType
 
 
 export type UsersType = {
     id: string
     img: string
     fullName: string
-    isFollow: boolean
+    followed: boolean
     status: string
-    location:LocationType
+    location: LocationType
 
 }
 
