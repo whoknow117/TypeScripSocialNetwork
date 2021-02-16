@@ -7,7 +7,7 @@ import {
     UsersPageType,
     UsersType
 } from "../types/types";
-import {act} from "react-dom/test-utils";
+
 
 
 export const followAC = (userID: string):FollowActionType => {
